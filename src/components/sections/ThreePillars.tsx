@@ -1,55 +1,56 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Cpu, GraduationCap, ArrowRight } from "lucide-react";
+import { ShieldCheck, Cpu, GraduationCap, ArrowRight, Gavel, ShieldAlert } from "lucide-react";
 import Link from "next/link";
 import Section from "../ui/Section";
 
 const pillars = [
     {
-        title: "Governance",
-        description: "Navigate the EU AI Act and ISO 42001 with confidence. Our strategic framework ensures compliance while maintaining agility.",
-        icon: ShieldCheck,
-        color: "neon-blue",
+        title: "AI Governance & Compliance",
+        description: "Aligning your systems with the EU AI Act, ISO 42001, and NIST frameworks. We guide you from gap analysis to audit readiness.",
+        icon: Gavel,
         href: "/governance",
+        color: "text-neon-blue",
+        borderColor: "border-neon-blue/20",
+        bgColor: "bg-neon-blue/5",
     },
     {
-        title: "Architecture",
-        description: "Deep-tech security defense. From red teaming to guardrail implementation, we harden your AI infrastructure from the core.",
-        icon: Cpu,
-        color: "neon-green",
+        title: "AI Architecture & Hardening",
+        description: "Deep-tech security assessments, red teaming, and guardrail implementation for LLMs and enterprise AI pipelines.",
+        icon: ShieldAlert,
         href: "/architecture",
+        color: "text-neon-green",
+        borderColor: "border-neon-green/20",
+        bgColor: "bg-neon-green/5",
     },
     {
-        title: "Training",
-        description: "Empower your workforce. Role-specific education from executive briefings to technical prompt injection defense workshops.",
+        title: "Training & Awareness",
+        description: "Elevating the human element. Executive briefings and technical workshops tailored for securing the intelligence era.",
         icon: GraduationCap,
-        color: "neon-purple",
         href: "/training",
+        color: "text-neon-purple",
+        borderColor: "border-neon-purple/20",
+        bgColor: "bg-neon-purple/5",
     },
 ];
 
 const ThreePillars = () => {
     return (
-        <Section className="bg-dark-charcoal/30">
+        <Section className="bg-background">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {pillars.map((pillar, index) => (
                     <motion.div
                         key={pillar.title}
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="group glass-card p-10 hover:border-white/20 transition-all duration-500 relative overflow-hidden"
+                        className={`glass-card p-10 border-2 ${pillar.borderColor} ${pillar.bgColor} hover:scale-[1.02] transition-all duration-300 group`}
                     >
-                        <div className={`absolute top-0 right-0 w-32 h-32 bg-${pillar.color}/10 -mr-16 -mt-16 rounded-full blur-[80px] group-hover:bg-${pillar.color}/20 transition-all`} />
-
-                        <div className={`w-16 h-16 rounded-2xl bg-${pillar.color}/10 border border-${pillar.color}/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_15px_rgba(0,0,0,0.5)]`}>
-                            <pillar.icon className={`w-8 h-8 text-${pillar.color}`} />
-                        </div>
-
-                        <h3 className="text-2xl font-bold mb-4 text-white">{pillar.title}</h3>
-                        <p className="text-white/50 leading-relaxed mb-8">
+                        <pillar.icon className={`w-12 h-12 ${pillar.color} mb-8 transition-transform group-hover:scale-110`} />
+                        <h3 className="text-2xl font-black mb-4 text-foreground">{pillar.title}</h3>
+                        <p className="text-foreground/50 mb-8 leading-relaxed">
                             {pillar.description}
                         </p>
 

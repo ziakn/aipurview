@@ -31,7 +31,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tight text-white max-w-5xl mx-auto"
+                    className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tight text-foreground max-w-5xl mx-auto"
                 >
                     Securing the intelligence <br />
                     <span className="bg-gradient-to-r from-neon-blue via-neon-green to-neon-purple bg-clip-text text-transparent">
@@ -43,7 +43,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+                    className="text-foreground/60 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
                 >
                     Premium AI Security & Governance Boutique. We bridge the gap between innovation and compliance with elite fractional leadership and technical assessments.
                 </motion.p>

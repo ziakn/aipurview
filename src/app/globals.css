@@ -1,30 +1,53 @@
 @import "tailwindcss";
 
 @theme {
-  --color-neon-blue: #00C2FF;
-  --color-neon-green: #2ECC71;
-  --color-neon-purple: #9B59B6;
-  --color-eu-blue: #003399;
-  --color-dark-charcoal: #0A0A0B;
-  --color-deep-black: #050505;
+  --color-neon-blue: var(--neon-blue);
+  --color-neon-green: var(--neon-green);
+  --color-neon-purple: var(--neon-purple);
+  --color-eu-blue: var(--eu-blue);
+  --color-dark-charcoal: var(--dark-charcoal);
+  --color-deep-black: var(--deep-black);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
 
   --font-heading: var(--font-inter), ui-sans-serif, system-ui;
   --font-body: var(--font-roboto), ui-sans-serif, system-ui;
+
+  --background-color-background: var(--background);
+  --text-color-foreground: var(--foreground);
 }
 
 :root {
+  --background: #FFFFFF;
+  --foreground: #050505;
+  --neon-blue: #0084FF;
+  --neon-green: #10B981;
+  --neon-purple: #8B5CF6;
+  --eu-blue: #003399;
+  --dark-charcoal: #F3F4F6;
+  --deep-black: #FFFFFF;
+  --card-bg: rgba(0, 0, 0, 0.03);
+  --card-border: rgba(0, 0, 0, 0.08);
+}
+
+.dark {
   --background: #050505;
   --foreground: #FFFFFF;
   --neon-blue: #00C2FF;
   --neon-green: #2ECC71;
   --neon-purple: #9B59B6;
   --eu-blue: #003399;
+  --dark-charcoal: #0A0A0B;
+  --deep-black: #050505;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
 }
 
 @layer base {
   body {
-    @apply bg-deep-black text-white antialiased selection:bg-neon-blue selection:text-deep-black;
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased selection:bg-neon-blue selection:text-deep-black;
     font-family: var(--font-body);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   h1,
@@ -34,7 +57,7 @@
   h5,
   h6 {
     font-family: var(--font-heading);
-    @apply font-bold tracking-tight;
+    @apply font-bold tracking-tight text-[var(--foreground)];
   }
 }
 
@@ -48,20 +71,20 @@
   }
 
   .glass-card {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+    @apply bg-[var(--card-bg)] backdrop-blur-lg border border-[var(--card-border)] rounded-2xl;
   }
 
   .btn-primary {
-    @apply bg-neon-blue text-deep-black font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105;
+    @apply bg-neon-blue text-white dark:text-deep-black font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105;
     box-shadow: 0 0 0px rgba(0, 194, 255, 0);
   }
 
   .btn-primary:hover {
-    box-shadow: 0 0 20px rgba(0, 194, 255, 0.4);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--neon-blue) 40%, transparent);
   }
 
   .btn-secondary {
-    @apply border-2 border-neon-blue text-neon-blue font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-neon-blue hover:text-deep-black;
+    @apply border-2 border-neon-blue text-neon-blue font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-neon-blue hover:text-white dark:hover:text-deep-black;
   }
 }
 

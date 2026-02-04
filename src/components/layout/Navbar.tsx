@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Shield, Menu, X } from "lucide-react";
 import { Button } from "../ui/Button";
+import { ThemeToggle } from "../ui/ThemeToggle";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -27,13 +28,13 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-deep-black/80 backdrop-blur-lg border-b border-white/10 py-4" : "bg-transparent py-6"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-card-border py-4" : "bg-transparent py-6"
                 }`}
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2 group">
                     <Shield className="w-8 h-8 text-neon-blue transition-transform group-hover:rotate-12" />
-                    <span className="text-xl font-bold tracking-tighter text-white">
+                    <span className="text-xl font-bold tracking-tighter text-foreground">
                         AIPurview<span className="text-neon-blue">.com</span>
                     </span>
                 </Link>
@@ -44,35 +45,41 @@ const Navbar = () => {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-white/70 hover:text-neon-blue transition-colors font-medium text-sm uppercase tracking-widest"
+                            className="text-foreground/70 hover:text-neon-blue transition-colors font-medium text-sm uppercase tracking-widest"
                         >
                             {link.name}
                         </Link>
                     ))}
-                    <Link href="/contact">
-                        <Button variant="outline" size="sm">
-                            Contact Us
-                        </Button>
-                    </Link>
+                    <div className="flex items-center space-x-4">
+                        <ThemeToggle />
+                        <Link href="/contact">
+                            <Button variant="outline" size="sm">
+                                Contact Us
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
 
                 {/* Mobile Toggle */}
-                <button
-                    className="md:hidden text-white"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    {isMobileMenuOpen ? <X /> : <Menu />}
-                </button>
+                <div className="md:hidden flex items-center space-x-4">
+                    <ThemeToggle />
+                    <button
+                        className="text-foreground"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? <X /> : <Menu />}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-deep-black border-b border-white/10 p-6 flex flex-col space-y-4">
+                <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-card-border p-6 flex flex-col space-y-4">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-white/70 hover:text-neon-blue transition-colors font-medium text-lg"
+                            className="text-foreground/70 hover:text-neon-blue transition-colors font-medium text-lg"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             {link.name}

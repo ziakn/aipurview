@@ -29,14 +29,14 @@ const advantages = [
 
 const Expertise = () => {
     return (
-        <Section className="bg-dark-charcoal/20">
+        <Section className="bg-background">
             <div className="flex flex-col lg:flex-row gap-16 items-center">
                 <div className="lg:w-1/2">
-                    <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
+                    <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight text-foreground">
                         The Boutique <br />
                         <span className="text-neon-green">Advantage</span>
                     </h2>
-                    <p className="text-white/60 text-lg mb-10 leading-relaxed">
+                    <p className="text-foreground/60 text-lg mb-10 leading-relaxed">
                         In the rapidly evolving AI landscape, generic security isn't enough. AIPurview provides high-impact, specialized expertise that larger firms simply can't match for speed and depth.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -51,9 +51,9 @@ const Expertise = () => {
                             >
                                 <div className="flex items-center space-x-3">
                                     <adv.icon className="w-5 h-5 text-neon-green" />
-                                    <h4 className="font-bold text-white">{adv.title}</h4>
+                                    <h4 className="font-bold text-foreground">{adv.title}</h4>
                                 </div>
-                                <p className="text-white/40 text-sm">{adv.description}</p>
+                                <p className="text-foreground/40 text-sm">{adv.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -66,8 +66,8 @@ const Expertise = () => {
                                 <div className="inline-block px-4 py-2 bg-neon-green/10 border border-neon-green/20 rounded-full text-neon-green text-xs font-bold uppercase tracking-widest mb-6">
                                     Elite Security Boutique
                                 </div>
-                                <h3 className="text-3xl font-black mb-4">Dedicated to <br /> EU Enterprises</h3>
-                                <p className="text-white/40 text-sm max-w-xs mx-auto">
+                                <h3 className="text-3xl font-black mb-4 text-foreground">Dedicated to <br /> EU Enterprises</h3>
+                                <p className="text-foreground/40 text-sm max-w-xs mx-auto">
                                     We provide the "license to operate" in the world's most regulated AI environment.
                                 </p>
                             </div>

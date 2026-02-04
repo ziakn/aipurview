@@ -36,12 +36,12 @@ const matrix = [
 
 const TrainingPage = () => {
     return (
-        <main className="bg-deep-black min-h-screen text-white">
+        <main className="bg-background min-h-screen text-foreground">
             <Navbar />
 
             {/* Hero */}
             <section className="pt-40 pb-20 relative overflow-hidden text-center">
-                <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 z-0 text-foreground">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(155,89,182,0.1)_0%,transparent_70%)]" />
                 </div>
                 <div className="container mx-auto px-6 relative z-10">
@@ -55,11 +55,11 @@ const TrainingPage = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-7xl font-black mb-8"
+                        className="text-5xl md:text-7xl font-black mb-8 text-foreground"
                     >
                         The Human Element
                     </motion.h1>
-                    <p className="text-white/60 text-xl max-w-2xl mx-auto mb-12">
+                    <p className="text-foreground/60 text-xl max-w-2xl mx-auto mb-12">
                         Technology is only as secure as the people who operate it. We provide role-specific education to foster a culture of AI safety.
                     </p>
                 </div>
@@ -80,9 +80,9 @@ const TrainingPage = () => {
                             <div className="w-16 h-16 bg-neon-purple/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform">
                                 <module.icon className="w-8 h-8 text-neon-purple" />
                             </div>
-                            <h3 className="text-2xl font-bold mb-2 group-hover:text-neon-purple transition-colors">{module.title}</h3>
+                            <h3 className="text-2xl font-bold mb-2 group-hover:text-neon-purple transition-colors text-foreground">{module.title}</h3>
                             <p className="text-neon-purple/70 text-xs font-bold uppercase tracking-widest mb-6">{module.role}</p>
-                            <p className="text-white/50 text-sm leading-relaxed">{module.focus}</p>
+                            <p className="text-foreground/50 text-sm leading-relaxed">{module.focus}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -91,11 +91,11 @@ const TrainingPage = () => {
             {/* Training Matrix */}
             <Section>
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-3xl font-bold mb-12 text-center">Curriculum Matrix</h2>
-                    <div className="overflow-x-auto ring-1 ring-white/10 rounded-3xl">
+                    <h2 className="text-3xl font-bold mb-12 text-center text-foreground">Curriculum Matrix</h2>
+                    <div className="overflow-x-auto ring-1 ring-card-border rounded-3xl">
                         <table className="w-full text-left">
                             <thead>
-                                <tr className="bg-white/5 uppercase text-xs font-bold tracking-[0.2em] text-white/40">
+                                <tr className="bg-foreground/5 uppercase text-xs font-bold tracking-[0.2em] text-foreground/40">
                                     <th className="px-8 py-6">Target Role</th>
                                     <th className="px-8 py-6">AI Strategy</th>
                                     <th className="px-8 py-6">Risk Mgmt</th>
@@ -103,29 +103,29 @@ const TrainingPage = () => {
                                     <th className="px-8 py-6">Compliance</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-white/5">
+                            <tbody className="divide-y divide-card-border">
                                 {matrix.map((row) => (
-                                    <tr key={row.role} className="hover:bg-white/[0.02] transition-colors group">
-                                        <td className="px-8 py-6 font-bold text-white/80 group-hover:text-white transition-colors">
+                                    <tr key={row.role} className="hover:bg-foreground/[0.02] transition-colors group">
+                                        <td className="px-8 py-6 font-bold text-foreground/80 group-hover:text-foreground transition-colors">
                                             {row.role}
                                         </td>
                                         <td className="px-8 py-6">
-                                            <span className={row.strategy === "●" ? "text-neon-purple" : "text-white/10"}>
+                                            <span className={row.strategy === "●" ? "text-neon-purple" : "text-foreground/10"}>
                                                 {row.strategy === "●" ? <ShieldCheck className="w-5 h-5" /> : <ShieldCheck className="w-5 h-5 opacity-20" />}
                                             </span>
                                         </td>
                                         <td className="px-8 py-6">
-                                            <span className={row.risk === "●" ? "text-neon-purple" : "text-white/10"}>
+                                            <span className={row.risk === "●" ? "text-neon-purple" : "text-foreground/10"}>
                                                 {row.risk === "●" ? <ShieldCheck className="w-5 h-5" /> : <ShieldCheck className="w-5 h-5 opacity-20" />}
                                             </span>
                                         </td>
                                         <td className="px-8 py-6">
-                                            <span className={row.technical === "●" ? "text-neon-purple" : "text-white/10"}>
+                                            <span className={row.technical === "●" ? "text-neon-purple" : "text-foreground/10"}>
                                                 {row.technical === "●" ? <ShieldCheck className="w-5 h-5" /> : <ShieldCheck className="w-5 h-5 opacity-20" />}
                                             </span>
                                         </td>
                                         <td className="px-8 py-6">
-                                            <span className={row.compliance === "●" ? "text-neon-purple" : "text-white/10"}>
+                                            <span className={row.compliance === "●" ? "text-neon-purple" : "text-foreground/10"}>
                                                 {row.compliance === "●" ? <ShieldCheck className="w-5 h-5" /> : <ShieldCheck className="w-5 h-5 opacity-20" />}
                                             </span>
                                         </td>
@@ -134,7 +134,7 @@ const TrainingPage = () => {
                             </tbody>
                         </table>
                     </div>
-                    <p className="text-white/30 text-[10px] mt-6 flex items-center justify-center space-x-2">
+                    <p className="text-foreground/30 text-[10px] mt-6 flex items-center justify-center space-x-2">
                         <AlertTriangle className="w-3 h-3 text-neon-purple" />
                         <span>Modules can be customized based on organizational risk profile</span>
                     </p>
