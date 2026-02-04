@@ -56,7 +56,7 @@ const ThreePillars = () => {
 
                         <Link
                             href={pillar.href}
-                            className={`inline-flex items-center space-x-2 text-sm font-bold uppercase tracking-widest text-${pillar.color} hover:translate-x-1 transition-transform`}
+                            className={`inline-flex items-center space-x-2 text-sm font-bold uppercase tracking-widest ${pillar.color} hover:translate-x-1 transition-transform`}
                         >
                             <span>Explore {pillar.title}</span>
                             <ArrowRight className="w-4 h-4" />

@@ -88,8 +88,8 @@ const Expertise = () => {
                                 <ShieldCheck className="w-5 h-5 text-neon-green" />
                             </div>
                             <div>
-                                <p className="text-xs font-bold text-white uppercase tracking-widest">ISO 42001 Expert</p>
-                                <p className="text-[10px] text-white/40">Conformity Evaluated</p>
+                                <p className="text-xs font-bold text-foreground uppercase tracking-widest">ISO 42001 Expert</p>
+                                <p className="text-[10px] text-foreground/40">Conformity Evaluated</p>
                             </div>
                         </div>
                     </motion.div>

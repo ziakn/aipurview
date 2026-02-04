@@ -78,7 +78,7 @@ const ValueProposition = () => {
                         </div>
                     </div>
                     {/* Badge */}
-                    <div className="absolute -bottom-10 -right-10 bg-eu-blue p-8 rounded-2xl shadow-2xl border border-white/20 hidden md:block">
+                    <div className="absolute -bottom-10 -right-10 bg-eu-blue p-8 rounded-2xl shadow-2xl border border-card-border hidden md:block">
                         <div className="text-white text-xs font-bold uppercase tracking-[0.2em] mb-2">Policy Focus</div>
                         <div className="text-white text-2xl font-black leading-none">EU AI ACT <br /> EXPERTS</div>
                     </div>
