@@ -17,6 +17,17 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "AIPurview | Premium AI Security & Governance",
   description: "Securing the Intelligence that Powers Your Enterprise. Expert AI Governance, Architecture, and Training.",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "AIPurview",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  icons: {
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({

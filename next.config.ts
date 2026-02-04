@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+import withPWAInit from "@ducanh2912/next-pwa";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const withPWA = withPWAInit({
+  dest: "public",
+  disable: process.env.NODE_ENV === "development",
+  register: true,
+});
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Your existing Next.js config
+  // Silence Turbopack vs Webpack warning in Next.js 16
+  turbopack: {},
 };
 
-export default nextConfig;
+export default withPWA(nextConfig);
