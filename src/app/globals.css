@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
+@theme {
+  --color-neon-blue: #00C2FF;
+  --color-neon-green: #2ECC71;
+  --color-neon-purple: #9B59B6;
+  --color-eu-blue: #003399;
+  --color-dark-charcoal: #0A0A0B;
+  --color-deep-black: #050505;
+
+  --font-heading: var(--font-inter), ui-sans-serif, system-ui;
+  --font-body: var(--font-roboto), ui-sans-serif, system-ui;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050505;
+  --foreground: #FFFFFF;
+  --neon-blue: #00C2FF;
+  --neon-green: #2ECC71;
+  --neon-purple: #9B59B6;
+  --eu-blue: #003399;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    @apply bg-deep-black text-white antialiased selection:bg-neon-blue selection:text-deep-black;
+    font-family: var(--font-body);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    @apply font-bold tracking-tight;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .glow-blue {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--neon-blue) 20%, transparent);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--neon-green) 20%, transparent);
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply bg-neon-blue text-deep-black font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105;
+    box-shadow: 0 0 0px rgba(0, 194, 255, 0);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(0, 194, 255, 0.4);
+  }
+
+  .btn-secondary {
+    @apply border-2 border-neon-blue text-neon-blue font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-neon-blue hover:text-deep-black;
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
