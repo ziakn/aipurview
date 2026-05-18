@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Shield, Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
+import { Shield, Mail, MapPin, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
     return (
@@ -7,26 +7,26 @@ const Footer = () => {
             <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div className="space-y-6">
                     <Link href="/" className="flex items-center space-x-2">
-                        <Shield className="w-8 h-8 text-neon-blue" />
-                        <span className="text-xl font-bold tracking-tighter text-foreground">
-                            AIPurview<span className="text-neon-blue">.com</span>
+                        <Shield className="w-7 h-7 text-neon-blue" />
+                        <span className="text-xl font-semibold tracking-tight text-foreground">
+                            AIPurview<span className="text-foreground/45">.com</span>
                         </span>
                     </Link>
                     <p className="text-foreground/50 text-sm leading-relaxed">
-                        Premium AI Security & Governance Boutique. Securing the intelligence that powers your enterprise.
+                        AI security and governance support for teams preparing regulated systems for production.
                     </p>
                     <div className="flex items-center space-x-4">
-                        <a href="#" className="p-2 bg-foreground/5 rounded-full hover:bg-neon-blue/20 hover:text-neon-blue transition-all">
-                            <Linkedin className="w-5 h-5 text-foreground/50 hover:text-neon-blue" />
+                        <a href="#" className="p-2 border border-card-border rounded-md hover:bg-dark-charcoal transition-colors">
+                            <Linkedin className="w-5 h-5 text-foreground/55" />
                         </a>
-                        <a href="#" className="p-2 bg-foreground/5 rounded-full hover:bg-neon-blue/20 hover:text-neon-blue transition-all">
-                            <Twitter className="w-5 h-5 text-foreground/50 hover:text-neon-blue" />
+                        <a href="#" className="p-2 border border-card-border rounded-md hover:bg-dark-charcoal transition-colors">
+                            <Twitter className="w-5 h-5 text-foreground/55" />
                         </a>
                     </div>
                 </div>
 
                 <div>
-                    <h4 className="text-foreground font-bold mb-6 text-sm uppercase tracking-widest">Services</h4>
+                    <h4 className="text-foreground font-semibold mb-6 text-sm">Services</h4>
                     <ul className="space-y-4 text-foreground/50 text-sm">
                         <li><Link href="/vciso" className="hover:text-neon-blue transition-colors">vCISO Services</Link></li>
                         <li><Link href="/governance" className="hover:text-neon-blue transition-colors">AI Governance</Link></li>
@@ -36,7 +36,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h4 className="text-foreground font-bold mb-6 text-sm uppercase tracking-widest">Company</h4>
+                    <h4 className="text-foreground font-semibold mb-6 text-sm">Company</h4>
                     <ul className="space-y-4 text-foreground/50 text-sm">
                         <li><Link href="/about" className="hover:text-neon-blue transition-colors">About Us</Link></li>
                         <li><Link href="/resources" className="hover:text-neon-blue transition-colors">Knowledge Hub</Link></li>
@@ -47,7 +47,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h4 className="text-foreground font-bold mb-6 text-sm uppercase tracking-widest">Contact</h4>
+                    <h4 className="text-foreground font-semibold mb-6 text-sm">Contact</h4>
                     <ul className="space-y-4 text-foreground/50 text-sm">
                         <li className="flex items-start space-x-3">
                             <Mail className="w-5 h-5 text-neon-blue" />
@@ -58,8 +58,7 @@ const Footer = () => {
                             <span>Remote First - Serving the EU</span>
                         </li>
                         <li className="pt-4">
-                            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-eu-blue/10 border border-eu-blue/40 rounded-lg text-[10px] font-bold text-foreground uppercase tracking-tighter">
-                                <span className="w-2 h-2 bg-foreground rounded-full animate-pulse" />
+                            <div className="inline-flex items-center space-x-2 px-3 py-2 border border-card-border rounded-md text-xs font-medium text-foreground/65">
                                 <span>EU-Wide Remote Delivery</span>
                             </div>
                         </li>
@@ -68,7 +67,7 @@ const Footer = () => {
             </div>
             <div className="container mx-auto px-6 mt-20 pt-10 border-t border-card-border flex flex-col md:row items-center justify-between space-y-4 md:space-y-0 text-foreground/30 text-xs text-center md:text-left">
                 <p>© {new Date().getFullYear()} AIPurview. All rights reserved.</p>
-                <p>Built for the AI-First Era.</p>
+                <p>AI security, governance, and architecture.</p>
             </div>
         </footer>
     );

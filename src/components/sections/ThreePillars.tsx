@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Cpu, GraduationCap, ArrowRight, Gavel, ShieldAlert } from "lucide-react";
+import { GraduationCap, ArrowRight, Gavel, ShieldAlert } from "lucide-react";
 import Link from "next/link";
 import Section from "../ui/Section";
 
@@ -12,8 +12,6 @@ const pillars = [
         icon: Gavel,
         href: "/governance",
         color: "text-neon-blue",
-        borderColor: "border-neon-blue/20",
-        bgColor: "bg-neon-blue/5",
     },
     {
         title: "AI Architecture & Hardening",
@@ -21,8 +19,6 @@ const pillars = [
         icon: ShieldAlert,
         href: "/architecture",
         color: "text-neon-green",
-        borderColor: "border-neon-green/20",
-        bgColor: "bg-neon-green/5",
     },
     {
         title: "Training & Awareness",
@@ -30,8 +26,6 @@ const pillars = [
         icon: GraduationCap,
         href: "/training",
         color: "text-neon-purple",
-        borderColor: "border-neon-purple/20",
-        bgColor: "bg-neon-purple/5",
     },
 ];
 
@@ -46,17 +40,17 @@ const ThreePillars = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className={`glass-card p-10 border-2 ${pillar.borderColor} ${pillar.bgColor} hover:scale-[1.02] transition-all duration-300 group`}
+                        className="glass-card p-8 transition-colors duration-200 hover:border-foreground/25 group"
                     >
-                        <pillar.icon className={`w-12 h-12 ${pillar.color} mb-8 transition-transform group-hover:scale-110`} />
-                        <h3 className="text-2xl font-black mb-4 text-foreground">{pillar.title}</h3>
-                        <p className="text-foreground/50 mb-8 leading-relaxed">
+                        <pillar.icon className={`w-9 h-9 ${pillar.color} mb-8`} />
+                        <h3 className="text-2xl font-semibold mb-4 text-foreground">{pillar.title}</h3>
+                        <p className="text-foreground/60 mb-8 leading-relaxed">
                             {pillar.description}
                         </p>
 
                         <Link
                             href={pillar.href}
-                            className={`inline-flex items-center space-x-2 text-sm font-bold uppercase tracking-widest ${pillar.color} hover:translate-x-1 transition-transform`}
+                            className="inline-flex items-center space-x-2 text-sm font-semibold text-foreground hover:text-neon-blue transition-colors"
                         >
                             <span>Explore {pillar.title}</span>
                             <ArrowRight className="w-4 h-4" />

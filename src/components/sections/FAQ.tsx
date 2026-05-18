@@ -35,18 +35,18 @@ const FAQ = () => {
         <Section className="bg-background">
             <div className="flex flex-col lg:flex-row gap-16">
                 <div className="lg:w-1/3">
-                    <div className="inline-flex items-center space-x-2 text-neon-purple text-xs font-bold uppercase tracking-widest mb-6">
+                    <div className="inline-flex items-center space-x-2 text-foreground/55 text-sm font-medium mb-6">
                         <HelpCircle className="w-4 h-4" />
-                        <span>Common Inquiries</span>
+                        <span>Common questions</span>
                     </div>
-                    <h2 className="text-4xl font-black mb-6 text-foreground">Expert <br /><span className="text-neon-purple">Insights.</span></h2>
-                    <p className="text-foreground/50 leading-relaxed mb-8">
+                    <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-foreground">Useful context before we talk</h2>
+                    <p className="text-foreground/60 leading-relaxed mb-8">
                         Navigating the intersection of AI innovation and European regulation is complex. Here are answers to the questions we hear most often.
                     </p>
-                    <div className="p-6 glass-card border-neon-purple/20 bg-neon-purple/5">
-                        <p className="text-xs font-bold text-foreground mb-2">Still have questions?</p>
-                        <p className="text-xs text-foreground/40 mb-4">Our experts are ready to provide a deep dive into your specific use case.</p>
-                        <a href="/contact" className="text-xs font-bold text-neon-purple uppercase hover:underline">Book a deep dive →</a>
+                    <div className="p-6 glass-card">
+                        <p className="text-sm font-semibold text-foreground mb-2">Still have questions?</p>
+                        <p className="text-sm text-foreground/55 mb-4">We can walk through your specific systems, risk category, and deadlines.</p>
+                        <a href="/contact" className="text-sm font-semibold text-neon-blue hover:underline">Book a consultation</a>
                     </div>
                 </div>
 
@@ -54,16 +54,16 @@ const FAQ = () => {
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className={`glass-card border-card-border overflow-hidden transition-all duration-300 ${openIndex === index ? "bg-foreground/5 border-neon-purple/30" : "hover:bg-foreground/[0.02]"}`}
+                            className={`glass-card border-card-border overflow-hidden transition-colors duration-200 ${openIndex === index ? "bg-dark-charcoal/60" : "hover:bg-dark-charcoal/40"}`}
                         >
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                 className="w-full p-6 text-left flex items-center justify-between"
                             >
-                                <span className={`font-bold transition-colors ${openIndex === index ? "text-neon-purple" : "text-foreground/80"}`}>
+                                <span className="font-semibold text-foreground/85 transition-colors">
                                     {faq.question}
                                 </span>
-                                <div className={`shrink-0 ml-4 p-2 rounded-lg ${openIndex === index ? "bg-neon-purple/20 text-neon-purple" : "bg-foreground/5 text-foreground/30"}`}>
+                                <div className={`shrink-0 ml-4 p-2 rounded-md ${openIndex === index ? "bg-background text-foreground" : "bg-foreground/5 text-foreground/40"}`}>
                                     {openIndex === index ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                                 </div>
                             </button>

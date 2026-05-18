@@ -18,39 +18,38 @@
 }
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #050505;
-  --neon-blue: #0084FF;
-  --neon-green: #10B981;
-  --neon-purple: #8B5CF6;
+  --background: #FAFAF8;
+  --foreground: #171717;
+  --neon-blue: #1D4ED8;
+  --neon-green: #047857;
+  --neon-purple: #6D5A8D;
   --eu-blue: #003399;
-  --dark-charcoal: #F3F4F6;
-  --deep-black: #FFFFFF;
-  --card-bg: rgba(0, 0, 0, 0.03);
-  --card-border: rgba(0, 0, 0, 0.08);
+  --dark-charcoal: #F0F1EE;
+  --deep-black: #FAFAF8;
+  --card-bg: #FFFFFF;
+  --card-border: rgba(23, 23, 23, 0.12);
 }
 
 .dark {
-  --background: #0A0B10;
-  --foreground: #F8FAFC;
-  --neon-blue: #00C2FF;
-  --neon-green: #2ECC71;
-  --neon-purple: #9B59B6;
+  --background: #111111;
+  --foreground: #F5F5F0;
+  --neon-blue: #7EA7E8;
+  --neon-green: #65B891;
+  --neon-purple: #A79BBC;
   --eu-blue: #003399;
-  --dark-charcoal: #111218;
-  --deep-black: #050506;
-  --card-bg: rgba(15, 20, 35, 0.4);
-  --card-border: rgba(255, 255, 255, 0.08);
+  --dark-charcoal: #1A1A1A;
+  --deep-black: #111111;
+  --card-bg: #171717;
+  --card-border: rgba(245, 245, 240, 0.12);
 }
 
 @layer base {
   body {
     @apply bg-[var(--background)] text-[var(--foreground)] antialiased selection:bg-neon-blue selection:text-deep-black;
     font-family: var(--font-body);
-    transition: background-color 0.5s ease, color 0.5s ease;
-    background-image: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.03), transparent 50%),
-      radial-gradient(circle at 100% 100%, rgba(0, 132, 255, 0.02), transparent 50%);
-    background-attachment: fixed;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    background-image: linear-gradient(rgba(23, 23, 23, 0.025) 1px, transparent 1px);
+    background-size: 100% 48px;
   }
 
   h1,
@@ -66,34 +65,32 @@
 
 @layer components {
   .glow-blue {
-    box-shadow: 0 0 20px color-mix(in srgb, var(--neon-blue) 20%, transparent);
+    box-shadow: none;
   }
 
   .glow-green {
-    box-shadow: 0 0 20px color-mix(in srgb, var(--neon-green) 20%, transparent);
+    box-shadow: none;
   }
 
   .glass-card {
-    @apply bg-[var(--card-bg)] backdrop-blur-xl border border-[var(--card-border)] rounded-2xl;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    @apply bg-[var(--card-bg)] border border-[var(--card-border)] rounded-lg;
+    box-shadow: 0 1px 2px rgba(23, 23, 23, 0.04);
   }
 
   .dark .glass-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 
   .btn-primary {
-    @apply bg-neon-blue text-white dark:text-deep-black font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105;
-    box-shadow: 0 0 0px rgba(0, 194, 255, 0);
+    @apply bg-foreground text-background font-semibold py-3 px-6 rounded-md transition-colors duration-200 hover:bg-foreground/85;
   }
 
   .btn-primary:hover {
-    box-shadow: 0 0 20px color-mix(in srgb, var(--neon-blue) 40%, transparent);
+    box-shadow: none;
   }
 
   .btn-secondary {
-    @apply border-2 border-neon-blue text-neon-blue font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-neon-blue hover:text-white dark:hover:text-deep-black;
+    @apply border border-card-border text-foreground font-semibold py-3 px-6 rounded-md transition-colors duration-200 hover:bg-dark-charcoal;
   }
 }
 

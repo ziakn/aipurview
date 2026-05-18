@@ -28,14 +28,14 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-card-border py-4" : "bg-transparent py-6"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${isScrolled ? "bg-background/95 border-b border-card-border py-4" : "bg-background/80 border-b border-transparent py-5"
                 }`}
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2 group">
-                    <Shield className="w-8 h-8 text-neon-blue transition-transform group-hover:rotate-12" />
-                    <span className="text-xl font-bold tracking-tighter text-foreground">
-                        AIPurview<span className="text-neon-blue">.com</span>
+                    <Shield className="w-7 h-7 text-neon-blue" />
+                    <span className="text-xl font-semibold tracking-tight text-foreground">
+                        AIPurview<span className="text-foreground/45">.com</span>
                     </span>
                 </Link>
 
@@ -45,7 +45,7 @@ const Navbar = () => {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-foreground/70 hover:text-neon-blue transition-colors font-medium text-sm uppercase tracking-widest"
+                            className="text-foreground/70 hover:text-foreground transition-colors font-medium text-sm"
                         >
                             {link.name}
                         </Link>
@@ -74,12 +74,12 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-card-border p-6 flex flex-col space-y-4">
+                <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-card-border p-6 flex flex-col space-y-4">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-foreground/70 hover:text-neon-blue transition-colors font-medium text-lg"
+                            className="text-foreground/70 hover:text-foreground transition-colors font-medium text-lg"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             {link.name}

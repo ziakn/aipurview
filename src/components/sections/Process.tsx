@@ -31,8 +31,8 @@ const Process = () => {
     return (
         <Section className="bg-background">
             <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground">The AIPurview <span className="text-neon-blue">Method</span></h2>
-                <p className="text-foreground/50 max-w-2xl mx-auto">
+                <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-foreground">The AIPurview method</h2>
+                <p className="text-foreground/60 max-w-2xl mx-auto">
                     A standardized, rigorous approach to securing enterprise AI. We bridge the gap from initial assessment to ongoing fractional leadership.
                 </p>
             </div>
@@ -45,16 +45,16 @@ const Process = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="relative p-8 glass-card border-card-border group"
+                        className="relative p-7 glass-card border-card-border"
                     >
-                        <div className="text-neon-blue/20 text-6xl font-black absolute top-4 right-4 group-hover:text-neon-blue/40 transition-colors">
+                        <div className="text-foreground/20 text-4xl font-semibold absolute top-6 right-6">
                             0{index + 1}
                         </div>
-                        <div className="w-14 h-14 rounded-2xl bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center mb-8">
-                            <step.icon className="w-7 h-7 text-neon-blue" />
+                        <div className="w-11 h-11 rounded-md bg-dark-charcoal border border-card-border flex items-center justify-center mb-8">
+                            <step.icon className="w-5 h-5 text-neon-blue" />
                         </div>
-                        <h3 className="text-xl font-bold mb-4 text-foreground">{step.title}</h3>
-                        <p className="text-foreground/40 text-sm leading-relaxed">
+                        <h3 className="text-lg font-semibold mb-4 text-foreground">{step.title}</h3>
+                        <p className="text-foreground/60 text-sm leading-relaxed">
                             {step.description}
                         </p>
                     </motion.div>

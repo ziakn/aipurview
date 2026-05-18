@@ -29,14 +29,13 @@ const features = [
 
 const ValueProposition = () => {
     return (
-        <Section className="bg-dark-charcoal/50">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <Section className="bg-dark-charcoal/60 border-y border-card-border">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 items-start">
                 <div>
-                    <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight text-foreground">
-                        Why leading EU <br />
-                        enterprises <span className="text-neon-blue">trust us.</span>
+                    <h2 className="text-3xl md:text-5xl font-semibold mb-8 leading-tight text-foreground">
+                        Why EU teams bring us in
                     </h2>
-                    <div className="space-y-12">
+                    <div className="space-y-8">
                         {features.map((feature, index) => (
                             <motion.div
                                 key={feature.title}
@@ -44,14 +43,14 @@ const ValueProposition = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="flex items-start space-x-6"
+                                className="flex items-start space-x-5"
                             >
-                                <div className="w-12 h-12 rounded-2xl bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center shrink-0">
-                                    <feature.icon className="w-6 h-6 text-neon-blue" />
+                                <div className="w-10 h-10 rounded-md bg-background border border-card-border flex items-center justify-center shrink-0">
+                                    <feature.icon className="w-5 h-5 text-neon-blue" />
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold mb-2 text-foreground">{feature.title}</h4>
-                                    <p className="text-foreground/50 text-sm leading-relaxed">
+                                    <h4 className="text-lg font-semibold mb-2 text-foreground">{feature.title}</h4>
+                                    <p className="text-foreground/60 text-sm leading-relaxed">
                                         {feature.description}
                                     </p>
                                 </div>
@@ -60,27 +59,21 @@ const ValueProposition = () => {
                     </div>
                 </div>
 
-                <div className="relative">
-                    <div className="aspect-square glass-card rotate-3 border-neon-blue/20 relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/10 to-transparent" />
-                        <div className="absolute inset-0 flex items-center justify-center text-center p-12">
-                            <div>
-                                <div className="text-6xl font-black text-neon-blue mb-4">100%</div>
-                                <div className="text-xl font-bold text-foreground mb-2">Remote EU Delivery</div>
-                                <p className="text-foreground/40 text-sm">Providing elite security expertise across all 27 member states, regardless of location.</p>
-                            </div>
-                        </div>
-                        {/* Decorative dots */}
-                        <div className="absolute top-10 right-10 flex space-x-2">
-                            <div className="w-2 h-2 rounded-full bg-neon-blue" />
-                            <div className="w-2 h-2 rounded-full bg-neon-blue/30" />
-                            <div className="w-2 h-2 rounded-full bg-neon-blue/10" />
-                        </div>
+                <div className="glass-card p-8 lg:p-10">
+                    <div className="border-b border-card-border pb-6 mb-6">
+                        <div className="text-sm font-medium text-foreground/55 mb-3">Delivery model</div>
+                        <div className="text-4xl font-semibold text-foreground mb-3">Remote across the EU</div>
+                        <p className="text-foreground/60 text-sm leading-relaxed">Focused security and governance support for distributed product, legal, and security teams.</p>
                     </div>
-                    {/* Badge */}
-                    <div className="absolute -bottom-10 -right-10 bg-eu-blue p-8 rounded-2xl shadow-2xl border border-card-border hidden md:block">
-                        <div className="text-white text-xs font-bold uppercase tracking-[0.2em] mb-2">Policy Focus</div>
-                        <div className="text-white text-2xl font-black leading-none">EU AI ACT <br /> EXPERTS</div>
+                    <div className="grid grid-cols-2 gap-6">
+                        <div>
+                            <div className="text-2xl font-semibold text-foreground">27</div>
+                            <div className="text-sm text-foreground/55">Member states covered</div>
+                        </div>
+                        <div>
+                            <div className="text-2xl font-semibold text-foreground">AI Act</div>
+                            <div className="text-sm text-foreground/55">Policy focus</div>
+                        </div>
                     </div>
                 </div>
             </div>

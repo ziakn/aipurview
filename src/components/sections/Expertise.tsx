@@ -32,12 +32,11 @@ const Expertise = () => {
         <Section className="bg-background">
             <div className="flex flex-col lg:flex-row gap-16 items-center">
                 <div className="lg:w-1/2">
-                    <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight text-foreground">
-                        The Boutique <br />
-                        <span className="text-neon-green">Advantage</span>
+                    <h2 className="text-3xl md:text-5xl font-semibold mb-8 leading-tight text-foreground">
+                        Specialist work, not generic consulting
                     </h2>
-                    <p className="text-foreground/60 text-lg mb-10 leading-relaxed">
-                        In the rapidly evolving AI landscape, generic security isn't enough. AIPurview provides high-impact, specialized expertise that larger firms simply can't match for speed and depth.
+                    <p className="text-foreground/65 text-lg mb-10 leading-relaxed">
+                        In the rapidly evolving AI landscape, generic security isn&apos;t enough. AIPurview provides high-impact, specialized expertise that larger firms simply can&apos;t match for speed and depth.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                         {advantages.map((adv, index) => (
@@ -51,48 +50,32 @@ const Expertise = () => {
                             >
                                 <div className="flex items-center space-x-3">
                                     <adv.icon className="w-5 h-5 text-neon-green" />
-                                    <h4 className="font-bold text-foreground">{adv.title}</h4>
+                                    <h4 className="font-semibold text-foreground">{adv.title}</h4>
                                 </div>
-                                <p className="text-foreground/40 text-sm">{adv.description}</p>
+                                <p className="text-foreground/60 text-sm">{adv.description}</p>
                             </motion.div>
                         ))}
                     </div>
                 </div>
-                <div className="lg:w-1/2 relative">
-                    <div className="aspect-square glass-card rotate-3 border-neon-green/20 relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-neon-green/10 to-transparent group-hover:from-neon-green/20 transition-all duration-700" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="p-12 text-center">
-                                <div className="inline-block px-4 py-2 bg-neon-green/10 border border-neon-green/20 rounded-full text-neon-green text-xs font-bold uppercase tracking-widest mb-6">
-                                    Elite Security Boutique
+                <div className="lg:w-1/2">
+                    <div className="glass-card p-8 lg:p-10">
+                        <div className="text-sm font-medium text-foreground/55 mb-8">Typical engagement shape</div>
+                        <div className="space-y-6">
+                            {["Risk and compliance baseline", "Architecture review and control mapping", "Executive reporting and remediation plan"].map((item, index) => (
+                                <div key={item} className="flex items-start gap-4">
+                                    <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-card-border text-sm font-semibold text-foreground/60">
+                                        {index + 1}
+                                    </div>
+                                    <div>
+                                        <h3 className="font-semibold text-foreground">{item}</h3>
+                                        <p className="mt-1 text-sm text-foreground/55">
+                                            Practical evidence, decisions, and next steps your teams can use.
+                                        </p>
+                                    </div>
                                 </div>
-                                <h3 className="text-3xl font-black mb-4 text-foreground">Dedicated to <br /> EU Enterprises</h3>
-                                <p className="text-foreground/40 text-sm max-w-xs mx-auto">
-                                    We provide the "license to operate" in the world's most regulated AI environment.
-                                </p>
-                            </div>
+                            ))}
                         </div>
-                        {/* Abstract tech elements */}
-                        <div className="absolute bottom-0 right-0 w-32 h-32 bg-neon-green/5 blur-3xl rounded-full" />
-                        <div className="absolute top-0 left-0 w-24 h-24 bg-neon-blue/5 blur-2xl rounded-full" />
                     </div>
-                    {/* Decorative floating card */}
-                    <motion.div
-                        initial={{ y: 20 }}
-                        animate={{ y: -20 }}
-                        transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-                        className="absolute -bottom-10 -left-10 glass-card p-6 border-white/10 hidden md:block"
-                    >
-                        <div className="flex items-center space-x-4">
-                            <div className="w-10 h-10 rounded-full bg-neon-green/20 flex items-center justify-center">
-                                <ShieldCheck className="w-5 h-5 text-neon-green" />
-                            </div>
-                            <div>
-                                <p className="text-xs font-bold text-foreground uppercase tracking-widest">ISO 42001 Expert</p>
-                                <p className="text-[10px] text-foreground/40">Conformity Evaluated</p>
-                            </div>
-                        </div>
-                    </motion.div>
                 </div>
             </div>
         </Section>

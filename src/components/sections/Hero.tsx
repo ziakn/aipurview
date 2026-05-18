@@ -6,53 +6,42 @@ import Link from "next/link";
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-            {/* Background elements */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-blue/15 rounded-full blur-[128px] animate-pulse" />
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/15 rounded-full blur-[128px] animate-pulse delay-1000" />
-                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.4] dark:opacity-[0.1]" />
-            </div>
-
-            <div className="container mx-auto px-6 relative z-10 text-center">
+        <section className="relative min-h-[88vh] flex items-center pt-24 overflow-hidden border-b border-card-border">
+            <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="inline-block px-4 py-1.5 mb-8 rounded-full border border-neon-blue/30 bg-neon-blue/10 backdrop-blur-sm"
+                    transition={{ duration: 0.45 }}
+                    className="mb-8 inline-flex border-l-2 border-neon-blue pl-4"
                 >
-                    <span className="text-neon-blue text-xs font-bold uppercase tracking-widest flex items-center space-x-2">
-                        <span className="w-1.5 h-1.5 bg-neon-blue rounded-full animate-ping" />
-                        <span>Pioneering AI Security in the EU</span>
+                    <span className="text-foreground/60 text-sm font-medium">
+                        AI security, governance, and regulatory readiness
                     </span>
                 </motion.div>
 
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tight text-foreground max-w-5xl mx-auto"
+                    transition={{ duration: 0.45, delay: 0.1 }}
+                    className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-8 leading-[1.05] tracking-tight text-foreground max-w-5xl"
                 >
-                    Securing the intelligence <br />
-                    <span className="bg-gradient-to-r from-neon-blue via-neon-green to-neon-purple bg-clip-text text-transparent">
-                        that powers your enterprise
-                    </span>
+                    Secure AI systems without slowing down the business.
                 </motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="text-foreground/60 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+                    transition={{ duration: 0.45, delay: 0.18 }}
+                    className="text-foreground/65 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
                 >
-                    Premium AI Security & Governance Boutique. We bridge the gap between innovation and compliance with elite fractional leadership and technical assessments.
+                    AIPurview helps EU enterprises assess AI risk, prepare for regulation, and harden the systems already moving through production.
                 </motion.p>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+                    transition={{ duration: 0.45, delay: 0.26 }}
+                    className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
                 >
                     <Link href="/governance">
                         <Button size="lg" className="w-full sm:w-auto">
