@@ -1,4 +1,8 @@
 import withPWAInit from "@ducanh2912/next-pwa";
+import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 const withPWA = withPWAInit({
   dest: "public",
@@ -8,8 +12,9 @@ const withPWA = withPWAInit({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Your existing Next.js config
-  // (Removed invalid Turbopack config)
+  turbopack: {
+    root: projectRoot,
+  },
 };
 
 export default withPWA(nextConfig);
