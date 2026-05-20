@@ -31,6 +31,7 @@ const Footer = () => {
                         <li><Link href="/vciso" className="hover:text-neon-blue transition-colors">vCISO Services</Link></li>
                         <li><Link href="/governance" className="hover:text-neon-blue transition-colors">AI Governance</Link></li>
                         <li><Link href="/architecture" className="hover:text-neon-blue transition-colors">Technical Assessment</Link></li>
+                        <li><Link href="/solutions" className="hover:text-neon-blue transition-colors">End-to-End Solutions</Link></li>
                         <li><Link href="/training" className="hover:text-neon-blue transition-colors">Training & Awareness</Link></li>
                     </ul>
                 </div>

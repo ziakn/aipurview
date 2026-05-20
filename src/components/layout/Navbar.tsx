@@ -22,6 +22,7 @@ const Navbar = () => {
         { name: "vCISO", href: "/vciso" },
         { name: "Governance", href: "/governance" },
         { name: "Architecture", href: "/architecture" },
+        { name: "Solutions", href: "/solutions" },
         { name: "Training", href: "/training" },
         { name: "Resources", href: "/resources" },
     ];
