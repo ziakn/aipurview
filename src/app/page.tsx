@@ -23,9 +23,9 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-24 bg-dark-charcoal/60 border-y border-card-border">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl font-semibold mb-8 text-foreground max-w-3xl">Ready for a clear view of your AI risk?</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold mb-8 text-foreground max-w-3xl">AI Governance you can prove, AI Risk you can manage.</h2>
           <p className="text-foreground/60 text-lg mb-12 max-w-2xl">
-            We can help you turn regulation, architecture, and security concerns into a practical remediation plan.
+            As you integrate AI, our Governance Services ensure compliance, protect data, and accelerate innovation.
           </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <a href="/contact" className="btn-primary w-full sm:w-auto text-center">

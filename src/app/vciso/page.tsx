@@ -1,32 +1,92 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, BarChart3, Users, ClipboardCheck, ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, ClipboardCheck, FileCheck2, Shield } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Section from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 
-const scope = [
+const outcomes = [
+    "Current State Assessment & Risk Profiling",
+    "Customized Security Roadmap & Governance",
+    "Current State Assessment & Risk Profiling",
+];
+
+const benefits = [
     {
-        title: "Strategy & Roadmap",
-        description: "Defining long-term AI security goals and alignment with business objectives.",
-        icon: Shield,
+        title: "Customized Strategy & Execution",
+        description: "Receive a security program and roadmap fully customized to your organization's size, industry, regulatory environment and unique risk profile, ensuring maximum relevance and impact.",
     },
     {
-        title: "Risk Appetite & Management",
-        description: "Quantifying and managing AI-specific risks within your organizational tolerance.",
-        icon: BarChart3,
+        title: "Access to Multi-Disciplinary Expertise",
+        description: "Leverage the collective power of our security specialists, including compliance analysts, vCIOs, and penetration testers, to provide both strategic oversight and essential hands-on execution.",
     },
     {
-        title: "Board Reporting",
-        description: "Translating technical AI risks into executive-level insights for board members.",
-        icon: Users,
+        title: "Guaranteed Audit & Compliance Readiness",
+        description: "Maintain continuous readiness for critical certifications such as SOC 2 and ISO 27001, along with applicable regulatory reviews, significantly reducing last-minute remediation efforts and costs.",
     },
     {
-        title: "Vendor Management",
-        description: "Assessing and auditing third-party AI providers and SaaS integrations.",
-        icon: ClipboardCheck,
+        title: "Proactive Incident Preparedness",
+        description: "We build and rigorously test incident response playbooks, enabling your team to act quickly and decisively during a breach, minimizing downtime and limiting financial damage.",
+    },
+    {
+        title: "Measurable Reduction in Risk Exposure",
+        description: "Lower your overall likelihood of security incidents through layered controls, targeted workforce training and continuous monitoring, securing operational continuity during any security event.",
+    },
+];
+
+const packages = [
+    {
+        title: "Basic",
+        items: [
+            "Single compliance framework (SOC 2, ISO 27001 or Regulatory)",
+            "Compliance dashboard access",
+            "Quarterly security reviews",
+            "Policy maintenance & updates",
+            "Vendor security questionnaires",
+            "Cybersecurity awareness support",
+            "Security Assessment",
+            "Internal Audit",
+            "24-hour response time",
+            "Whatsapp & email support",
+        ],
+    },
+    {
+        title: "Professional",
+        items: [
+            "Fast-track SOC 2, ISO 27001 or Regulatory certification support",
+            "Compliance dashboard access",
+            "Custom security policies & procedures",
+            "Gap analysis & remediation roadmap",
+            "Auditor selection & coordination",
+            "Monthly strategic calls",
+            "Vendor security reviews",
+            "Security awareness training",
+            "Cybersecurity education support",
+            "Internal Audit",
+            "Risk assessment support",
+            "12-hour response time",
+        ],
+    },
+    {
+        title: "Advance",
+        items: [
+            "Multi-framework compliance (SOC 2, ISO 27001, HIPAA, PCI DSS)",
+            "Fractional or full vCISO services",
+            "Compliance dashboard access",
+            "Security program development",
+            "Architecture & cloud security reviews",
+            "Advanced threat modeling",
+            "Incident response planning & leadership",
+            "M&A security due diligence",
+            "Internal audit support",
+            "Additional frameworks",
+            "Cybersecurity education support",
+            "Board-level reporting & presentations",
+            "Weekly support hours",
+            "6 hours response time",
+        ],
     },
 ];
 
@@ -35,98 +95,94 @@ const VCISOPage = () => {
         <main className="bg-background min-h-screen">
             <Navbar />
 
-            {/* Hero */}
-            <section className="pt-40 pb-20 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon-blue/10 rounded-full blur-[120px] -mr-64 -mt-64" />
-                <div className="container mx-auto px-6 text-center">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-7xl font-black mb-8 text-foreground"
-                    >
-                        Executive-Level <br />
-                        <span className="text-neon-blue font-mono uppercase tracking-tighter">Security on Demand</span>
-                    </motion.h1>
-                    <p className="text-foreground/60 text-xl max-w-2xl mx-auto mb-12">
-                        Fractional leadership for the AI era. Strategic guidance, risk governance, and technical oversight without the full-time overhead.
-                    </p>
-                    <Button size="lg">Inquire About vCISO Partnerships</Button>
+            <section className="pt-40 pb-20 relative overflow-hidden border-b border-card-border">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-4xl">
+                        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="mb-6 inline-flex border-l-2 border-neon-blue pl-4">
+                            <span className="text-sm font-medium text-foreground/60">#1 Priority Clients</span>
+                        </motion.div>
+                        <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }} className="text-5xl md:text-7xl font-semibold mb-8 text-foreground">
+                            vCISO
+                        </motion.h1>
+                        <p className="text-foreground/65 text-xl max-w-3xl mb-10 leading-relaxed">
+                            Our experts strategically identify, quantify and manage your cybersecurity risks.
+                        </p>
+                        <p className="text-foreground/60 text-lg max-w-3xl mb-10">
+                            Gain strategic cyber leadership, expert guidance and proactive risk management.
+                        </p>
+                        <Button size="lg">Schedule a Consultation</Button>
+                    </div>
                 </div>
             </section>
 
-            {/* Service Scope */}
-            <Section className="bg-dark-charcoal/20">
-                <div className="mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Service Scope</h2>
-                    <p className="text-foreground/50 max-w-2xl">Our fractional CISOs integrate with your leadership to provide comprehensive oversight of your AI ecosystem.</p>
+            <Section>
+                <div className="mb-12 max-w-3xl">
+                    <div className="mb-4 text-sm font-medium text-neon-blue">Client Stories</div>
+                    <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-foreground">Validated Success: Client Case Studies</h2>
+                    <p className="text-foreground/60 text-lg">
+                        Explore detailed success stories and analyses highlighting measurable growth and proven expertise and delivering sustained, valuable business results.
+                    </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {scope.map((item, index) => (
-                        <motion.div
-                            key={item.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="glass-card p-8 hover:border-neon-blue/30 transition-all group"
-                        >
-                            <item.icon className="w-10 h-10 text-neon-blue mb-6 group-hover:scale-110 transition-transform" />
-                            <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
-                            <p className="text-foreground/50 text-sm leading-relaxed">{item.description}</p>
-                        </motion.div>
+                <div className="grid gap-5 md:grid-cols-3">
+                    {outcomes.map((outcome, index) => (
+                        <div key={`${outcome}-${index}`} className="glass-card p-7">
+                            <ClipboardCheck className="mb-6 h-8 w-8 text-neon-green" />
+                            <h3 className="text-lg font-semibold text-foreground">{outcome}</h3>
+                        </div>
                     ))}
                 </div>
             </Section>
 
-            {/* Why vCISO? */}
-            <Section>
-                <div className="flex flex-col lg:flex-row gap-16 items-center">
-                    <div className="lg:w-1/2">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">Why Fractional AI CISO?</h2>
-                        <div className="space-y-6">
-                            {[
-                                "Cost-Effective: 1/4 the cost of a full-time executive hire.",
-                                "Instant Expertise: Immediate access to senior-level AI security experience.",
-                                "Flexible Scale: Engagement scales up or down based on your roadmap.",
-                                "Unbiased Perspective: Third-party oversight free from internal politics.",
-                            ].map((text, i) => (
-                                <div key={i} className="flex items-start space-x-4">
-                                    <CheckCircle className="w-6 h-6 text-neon-green shrink-0 mt-1" />
-                                    <p className="text-foreground/70 text-lg">{text}</p>
-                                </div>
-                            ))}
-                        </div>
+            <Section className="bg-dark-charcoal/30">
+                <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+                    <div>
+                        <div className="mb-4 text-sm font-medium text-neon-blue">Benefits of a vCISO</div>
+                        <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-foreground">The Strategic Advantage of a vCISO</h2>
+                        <p className="text-foreground/60">
+                            Strategic security leadership aligned with your roadmap, compliance obligations and operational risk profile.
+                        </p>
                     </div>
-                    <div className="lg:w-1/2 w-full">
-                        <div className="glass-card p-10 relative border-neon-green/10">
-                            <div className="absolute inset-0 bg-neon-green/5 rounded-2xl" />
-                            <div className="relative z-10">
-                                <h4 className="text-2xl font-bold mb-6 text-foreground">Investment Comparison</h4>
-                                <div className="space-y-4">
-                                    <div className="flex justify-between items-end">
-                                        <span className="text-foreground/50">Full-time Senior CISO</span>
-                                        <span className="text-foreground font-bold text-xl">€250k+ /yr</span>
+                    <div className="space-y-5">
+                        {benefits.map((benefit) => (
+                            <div key={benefit.title} className="glass-card p-6">
+                                <div className="flex gap-4">
+                                    <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-neon-green" />
+                                    <div>
+                                        <h3 className="font-semibold text-foreground">{benefit.title}</h3>
+                                        <p className="mt-2 text-sm leading-relaxed text-foreground/60">{benefit.description}</p>
                                     </div>
-                                    <div className="w-full h-2 bg-foreground/5 rounded-full">
-                                        <div className="w-full h-full bg-foreground/20 rounded-full" />
-                                    </div>
-                                    <div className="flex justify-between items-end pt-4">
-                                        <span className="text-neon-green font-bold">AIPurview vCISO</span>
-                                        <span className="text-neon-green font-bold text-2xl">From €5k /mo</span>
-                                    </div>
-                                    <div className="w-full h-3 bg-white/5 rounded-full overflow-hidden">
-                                        <motion.div
-                                            initial={{ width: 0 }}
-                                            whileInView={{ width: "25%" }}
-                                            transition={{ duration: 1, ease: "easeOut" }}
-                                            className="h-full bg-neon-green"
-                                        />
-                                    </div>
-                                    <p className="text-[10px] text-foreground/30 uppercase tracking-widest pt-4">*Estimated market rates 2024</p>
                                 </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
+                </div>
+            </Section>
+
+            <Section>
+                <div className="mb-12 max-w-3xl">
+                    <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-foreground">vCISO Packages</h2>
+                    <p className="text-foreground/60">
+                        While these are general practices, we offer custom-tailored packages to meet your distinct requirements.
+                    </p>
+                </div>
+                <div className="grid gap-6 lg:grid-cols-3">
+                    {packages.map((pkg) => (
+                        <div key={pkg.title} className="glass-card p-7">
+                            <Shield className="mb-5 h-8 w-8 text-neon-blue" />
+                            <h3 className="mb-6 text-2xl font-semibold text-foreground">{pkg.title}</h3>
+                            <ul className="space-y-3">
+                                {pkg.items.map((item) => (
+                                    <li key={item} className="flex gap-3 text-sm text-foreground/65">
+                                        <FileCheck2 className="mt-0.5 h-4 w-4 shrink-0 text-neon-green" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <a href="/contact" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-neon-blue">
+                                Talk with Team <ArrowRight className="h-4 w-4" />
+                            </a>
+                        </div>
+                    ))}
                 </div>
             </Section>
 

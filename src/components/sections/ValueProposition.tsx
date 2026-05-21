@@ -1,30 +1,37 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Globe, Users, Zap } from "lucide-react";
+import { ClipboardCheck, FileCheck2, ShieldCheck, Target, Users, Zap } from "lucide-react";
 import Section from "../ui/Section";
 
 const features = [
     {
-        title: "EU AI Act Specialists",
-        description: "Deep expertise in Article 11 technical documentation and Article 12 logging requirements.",
+        title: "Prove Risk Oversight",
+        description: "Translate strategy into execution with evidence that supports compliance, resilience, and audit readiness.",
         icon: ShieldCheck,
     },
     {
-        title: "ISO 42001 Evaluated",
-        description: "We help you build an AI Management System (AIMS) that meets international conformity standards.",
+        title: "Validate Security Controls",
+        description: "Quantify cyber risk and strengthen maturity with controls that can be reviewed and trusted.",
         icon: Zap,
     },
     {
-        title: "Fractional Leadership",
-        description: "Dedicated vCISO support for high-stakes regulatory milestones and strategic AI hardening.",
+        title: "Meet Privacy Regulations",
+        description: "Integrate data privacy into a cohesive governance framework for emerging AI operations.",
         icon: Users,
     },
     {
-        title: "100% Remote Delivery",
-        description: "Elite security consulting delivered seamlessly across all EU member states.",
-        icon: Globe,
+        title: "Operationalize AI Governance",
+        description: "Turn cybersecurity, privacy, and AI governance into practical business enablers.",
+        icon: ClipboardCheck,
     },
+];
+
+const proofPoints = [
+    { label: "Compliance with Frameworks", icon: FileCheck2 },
+    { label: "Deliver Audit-Ready Evidence", icon: ShieldCheck },
+    { label: "Targeted Workshop & Training", icon: Target },
+    { label: "Third-Party Risk Management", icon: Users },
 ];
 
 const ValueProposition = () => {
@@ -33,8 +40,11 @@ const ValueProposition = () => {
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 items-start">
                 <div>
                     <h2 className="text-3xl md:text-5xl font-semibold mb-8 leading-tight text-foreground">
-                        Why EU teams bring us in
+                        Engineering Strategic AI Governance for Trusted Outcomes
                     </h2>
+                    <p className="text-foreground/65 text-lg mb-10 leading-relaxed">
+                        AIPurview integrates governance of cybersecurity, data privacy and AI into a cohesive framework that supports compliance, resilience and audit readiness. We help organizations translate strategy into execution, quantifying cyber risk, enhancing maturity and enabling trusted outcomes.
+                    </p>
                     <div className="space-y-8">
                         {features.map((feature, index) => (
                             <motion.div
@@ -61,19 +71,17 @@ const ValueProposition = () => {
 
                 <div className="glass-card p-8 lg:p-10">
                     <div className="border-b border-card-border pb-6 mb-6">
-                        <div className="text-sm font-medium text-foreground/55 mb-3">Delivery model</div>
-                        <div className="text-4xl font-semibold text-foreground mb-3">Remote across the EU</div>
-                        <p className="text-foreground/60 text-sm leading-relaxed">Focused security and governance support for distributed product, legal, and security teams.</p>
+                        <div className="text-sm font-medium text-foreground/55 mb-3">Your experienced Partner</div>
+                        <div className="text-4xl font-semibold text-foreground mb-3">Turning Cybersecurity, Privacy and AI Governance into Business Enablers</div>
+                        <p className="text-foreground/60 text-sm leading-relaxed">Focused governance support that helps your teams manage risk without disrupting the business.</p>
                     </div>
-                    <div className="grid grid-cols-2 gap-6">
-                        <div>
-                            <div className="text-2xl font-semibold text-foreground">27</div>
-                            <div className="text-sm text-foreground/55">Member states covered</div>
-                        </div>
-                        <div>
-                            <div className="text-2xl font-semibold text-foreground">AI Act</div>
-                            <div className="text-sm text-foreground/55">Policy focus</div>
-                        </div>
+                    <div className="space-y-4">
+                        {proofPoints.map((point) => (
+                            <div key={point.label} className="flex items-center gap-3">
+                                <point.icon className="h-5 w-5 text-neon-green" />
+                                <span className="text-sm font-medium text-foreground/70">{point.label}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

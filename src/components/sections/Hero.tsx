@@ -15,7 +15,7 @@ const Hero = () => {
                     className="mb-8 inline-flex border-l-2 border-neon-blue pl-4"
                 >
                     <span className="text-foreground/60 text-sm font-medium">
-                        AI security, governance, and regulatory readiness
+                        Secure Foundations for Scalable Innovation
                     </span>
                 </motion.div>
 
@@ -25,7 +25,7 @@ const Hero = () => {
                     transition={{ duration: 0.45, delay: 0.1 }}
                     className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-8 leading-[1.05] tracking-tight text-foreground max-w-5xl"
                 >
-                    Secure AI systems without slowing down the business.
+                    AI Governance you can prove, AI Risk you can manage.
                 </motion.h1>
 
                 <motion.p
@@ -34,7 +34,7 @@ const Hero = () => {
                     transition={{ duration: 0.45, delay: 0.18 }}
                     className="text-foreground/65 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
                 >
-                    AIPurview helps EU enterprises assess AI risk, prepare for regulation, and harden the systems already moving through production.
+                    As you integrate AI, our Governance Services ensure compliance, protect data, and accelerate innovation.
                 </motion.p>
 
                 <motion.div
@@ -43,9 +43,9 @@ const Hero = () => {
                     transition={{ duration: 0.45, delay: 0.26 }}
                     className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
                 >
-                    <Link href="/governance">
+                    <Link href="/ai-risk-and-governance">
                         <Button size="lg" className="w-full sm:w-auto">
-                            Our Services
+                            Discover More
                         </Button>
                     </Link>
                     <Link href="/contact">

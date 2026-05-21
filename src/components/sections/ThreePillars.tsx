@@ -7,22 +7,22 @@ import Section from "../ui/Section";
 
 const pillars = [
     {
-        title: "AI Governance & Compliance",
-        description: "Aligning your systems with the EU AI Act, ISO 42001, and NIST frameworks. We guide you from gap analysis to audit readiness.",
+        title: "AI Governance & Assurance",
+        description: "Embed Security and Privacy oversight into AI systems to ensure compliance with AI regulations.",
         icon: Gavel,
-        href: "/governance",
+        href: "/ai-risk-and-governance",
         color: "text-neon-blue",
     },
     {
-        title: "AI Architecture & Hardening",
-        description: "Deep-tech security assessments, red teaming, and guardrail implementation for LLMs and enterprise AI pipelines.",
+        title: "AI Security Assessment",
+        description: "Evaluate AI ecosystem to identify vulnerabilities, mitigate adversarial risks and ensure alignment with standards.",
         icon: ShieldAlert,
         href: "/architecture",
         color: "text-neon-green",
     },
     {
-        title: "Training & Awareness",
-        description: "Elevating the human element. Executive briefings and technical workshops tailored for securing the intelligence era.",
+        title: "AI Trainings and Workshops",
+        description: "Collaborative trainings to align stakeholders, define safeguards, and operationalize AI security with confidence.",
         icon: GraduationCap,
         href: "/training",
         color: "text-neon-purple",

@@ -6,23 +6,23 @@ import Section from "../ui/Section";
 
 const advantages = [
     {
-        title: "Boutique Focus",
-        description: "We aren't a generic consulting firm. We specialize exclusively in AI security and governance for the EU market.",
+        title: "AI Governance & Assurance",
+        description: "Embed Security and Privacy oversight into AI systems to ensure compliance with AI regulations.",
         icon: Target,
     },
     {
-        title: "Fractional Efficiency",
-        description: "Get elite C-suite expertise at a fraction of the cost of a full-time hire, scaling with your organizational needs.",
+        title: "AI Trainings and Workshops",
+        description: "Collaborative trainings to align stakeholders, define safeguards, and operationalize AI security with confidence.",
         icon: Zap,
     },
     {
-        title: "Regulatory Precision",
-        description: "Our experts live and breathe the EU AI Act, GDPR, and ISO standards, ensuring no compliance gap is left unaddressed.",
+        title: "vCISO Leadership & Security Strategy",
+        description: "Executive-level security oversight, strategic roadmaps and board-facing risk reporting.",
         icon: Award,
     },
     {
-        title: "Technical Depth",
-        description: "We don't just write policies; we implement technical guardrails and adversarial defenses to harden your AI pipelines.",
+        title: "AI Security Assessment",
+        description: "Evaluate AI ecosystem to identify vulnerabilities, mitigate adversarial risks and ensure alignment with standards.",
         icon: ShieldCheck,
     },
 ];
@@ -33,10 +33,10 @@ const Expertise = () => {
             <div className="flex flex-col lg:flex-row gap-16 items-center">
                 <div className="lg:w-1/2">
                     <h2 className="text-3xl md:text-5xl font-semibold mb-8 leading-tight text-foreground">
-                        Specialist work, not generic consulting
+                        Tailored AI Governance Services Aligned with Your Strategic Objectives
                     </h2>
                     <p className="text-foreground/65 text-lg mb-10 leading-relaxed">
-                        In the rapidly evolving AI landscape, generic security isn&apos;t enough. AIPurview provides high-impact, specialized expertise that larger firms simply can&apos;t match for speed and depth.
+                        We deliver modular, compliance-ready solutions that map directly to your risk posture, regulatory mandates, and operational goals.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                         {advantages.map((adv, index) => (
@@ -59,9 +59,9 @@ const Expertise = () => {
                 </div>
                 <div className="lg:w-1/2">
                     <div className="glass-card p-8 lg:p-10">
-                        <div className="text-sm font-medium text-foreground/55 mb-8">Typical engagement shape</div>
+                        <div className="text-sm font-medium text-foreground/55 mb-8">Our Services</div>
                         <div className="space-y-6">
-                            {["Risk and compliance baseline", "Architecture review and control mapping", "Executive reporting and remediation plan"].map((item, index) => (
+                            {["Protect your data in the AI era", "Enforce privacy and compliance", "Enable ethical oversight across every touchpoint"].map((item, index) => (
                                 <div key={item} className="flex items-start gap-4">
                                     <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-card-border text-sm font-semibold text-foreground/60">
                                         {index + 1}
@@ -69,7 +69,7 @@ const Expertise = () => {
                                     <div>
                                         <h3 className="font-semibold text-foreground">{item}</h3>
                                         <p className="mt-1 text-sm text-foreground/55">
-                                            Practical evidence, decisions, and next steps your teams can use.
+                                            AIPurview empowers organizations to harness AI responsibly without disrupting the business.
                                         </p>
                                     </div>
                                 </div>

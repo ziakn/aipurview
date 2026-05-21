@@ -6,23 +6,23 @@ import Section from "../ui/Section";
 
 const steps = [
     {
-        title: "Discovery & Context",
-        description: "We begin by understanding your AI roadmap, organizational structure, and jurisdictional compliance requirements.",
+        title: "Prove Risk Oversight",
+        description: "Connect AI, cybersecurity, and privacy governance to business risk decisions leaders can defend.",
         icon: Search,
     },
     {
-        title: "Strategic Gap Analysis",
-        description: "Our experts map your current systems against the EU AI Act, ISO 42001, and NIST frameworks to identify critical risks.",
+        title: "Validate Security Controls",
+        description: "Review safeguards, document evidence, and strengthen the control environment around AI systems.",
         icon: ShieldPlus,
     },
     {
-        title: "Technical Hardening",
-        description: "We implement technical guardrails, adversarial defenses, and robust governance policies to secure your intelligence.",
+        title: "Meet Privacy Regulations",
+        description: "Align data handling, oversight, and operational processes with privacy expectations.",
         icon: Cog,
     },
     {
-        title: "Sustained Governance",
-        description: "Ongoing fractional leadership (vCISO) ensures you remain compliant and secure as regulations and tech evolve.",
+        title: "Operationalize AI Governance",
+        description: "Move from framework intent to repeatable workflows, training, and third-party risk management.",
         icon: Rocket,
     },
 ];
@@ -31,9 +31,9 @@ const Process = () => {
     return (
         <Section className="bg-background">
             <div className="text-center mb-20">
-                <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-foreground">The AIPurview method</h2>
+                <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-foreground">Turning Governance Into Execution</h2>
                 <p className="text-foreground/60 max-w-2xl mx-auto">
-                    A standardized, rigorous approach to securing enterprise AI. We bridge the gap from initial assessment to ongoing fractional leadership.
+                    We help organizations translate strategy into execution, quantifying cyber risk, enhancing maturity and enabling trusted outcomes.
                 </p>
             </div>
 
