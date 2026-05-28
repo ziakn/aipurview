@@ -1,59 +1,58 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "../ui/Button";
 import Link from "next/link";
+import { Button } from "../ui/Button";
 
 const Hero = () => {
     return (
-        <section className="relative min-h-[88vh] flex items-center pt-24 overflow-hidden border-b border-card-border">
-            <div className="container mx-auto px-6 relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.45 }}
-                    className="mb-8 inline-flex border-l-2 border-neon-blue pl-4"
-                >
-                    <span className="text-foreground/60 text-sm font-medium">
-                        Secure Foundations for Scalable Innovation
-                    </span>
-                </motion.div>
+        <section className="relative overflow-hidden border-b border-card-border bg-background pt-28 md:pt-32">
+            <div className="mx-auto max-w-[1600px] px-5 pb-14 md:px-10 md:pb-18 lg:pb-20 xl:px-16">
+                <div className="max-w-5xl">
+                    <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.45 }}
+                        className="mb-8 inline-flex items-center gap-3 rounded-md border border-card-border bg-card-bg px-4 py-3"
+                    >
+                        <span className="h-2.5 w-2.5 rounded-full bg-brand-orange" />
+                        <span className="text-sm font-bold text-foreground/62">Secure Foundations for Scalable Innovation</span>
+                    </motion.div>
 
-                <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.45, delay: 0.1 }}
-                    className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-8 leading-[1.05] tracking-tight text-foreground max-w-5xl"
-                >
-                    AI Governance you can prove, AI Risk you can manage.
-                </motion.h1>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.45, delay: 0.08 }}
+                        className="max-w-5xl text-[clamp(2.75rem,5.6vw,5.75rem)] font-black leading-[1] tracking-[0] text-foreground"
+                    >
+                        AI Governance you can prove, AI Risk you can manage.
+                    </motion.h1>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.45, delay: 0.18 }}
-                    className="text-foreground/65 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
-                >
-                    As you integrate AI, our Governance Services ensure compliance, protect data, and accelerate innovation.
-                </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.45, delay: 0.16 }}
+                        className="mt-6 max-w-3xl text-lg leading-[1.45] text-foreground/66 md:text-xl"
+                    >
+                        As you integrate AI, our Governance Services ensure compliance, protect data, and accelerate innovation.
+                    </motion.p>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.45, delay: 0.26 }}
-                    className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
-                >
-                    <Link href="/ai-risk-and-governance">
-                        <Button size="lg" className="w-full sm:w-auto">
-                            Discover More
-                        </Button>
-                    </Link>
-                    <Link href="/contact">
-                        <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                            Book a Consultation
-                        </Button>
-                    </Link>
-                </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.45, delay: 0.24 }}
+                        className="mt-8 flex flex-col gap-3 sm:flex-row"
+                    >
+                        <Link href="/ai-risk-and-governance">
+                            <Button size="lg" className="w-full sm:w-auto">Discover More</Button>
+                        </Link>
+                        <Link href="/contact">
+                            <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                                Book a Consultation
+                            </Button>
+                        </Link>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

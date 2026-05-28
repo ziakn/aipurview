@@ -45,7 +45,7 @@ const BlogDetailPage = async ({ params }: BlogDetailPageProps) => {
                         Back to Articles
                     </Link>
                     <div className="max-w-4xl">
-                        <div className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-widest text-foreground/40">
+                        <div className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0] text-foreground/40">
                             <Newspaper className="h-4 w-4 text-neon-blue" />
                             <span>{post.date}</span>
                             <span>No Comments</span>

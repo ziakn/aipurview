@@ -36,10 +36,10 @@ const proofPoints = [
 
 const ValueProposition = () => {
     return (
-        <Section className="bg-dark-charcoal/60 border-y border-card-border">
+        <Section className="bg-background border-y border-card-border">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 items-start">
                 <div>
-                    <h2 className="text-3xl md:text-5xl font-semibold mb-8 leading-tight text-foreground">
+                    <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-foreground">
                         Engineering Strategic AI Governance for Trusted Outcomes
                     </h2>
                     <p className="text-foreground/65 text-lg mb-10 leading-relaxed">
@@ -56,10 +56,10 @@ const ValueProposition = () => {
                                 className="flex items-start space-x-5"
                             >
                                 <div className="w-10 h-10 rounded-md bg-background border border-card-border flex items-center justify-center shrink-0">
-                                    <feature.icon className="w-5 h-5 text-neon-blue" />
+                                    <feature.icon className="w-5 h-5 text-brand-orange" />
                                 </div>
                                 <div>
-                                    <h4 className="text-lg font-semibold mb-2 text-foreground">{feature.title}</h4>
+                                    <h4 className="text-lg font-bold mb-2 text-foreground">{feature.title}</h4>
                                     <p className="text-foreground/60 text-sm leading-relaxed">
                                         {feature.description}
                                     </p>
@@ -71,15 +71,15 @@ const ValueProposition = () => {
 
                 <div className="glass-card p-8 lg:p-10">
                     <div className="border-b border-card-border pb-6 mb-6">
-                        <div className="text-sm font-medium text-foreground/55 mb-3">Your experienced Partner</div>
-                        <div className="text-4xl font-semibold text-foreground mb-3">Turning Cybersecurity, Privacy and AI Governance into Business Enablers</div>
+                        <div className="text-sm font-bold text-brand-orange mb-3">Your experienced partner</div>
+                        <div className="text-3xl font-black leading-tight text-foreground mb-3 md:text-4xl">Turning Cybersecurity, Privacy and AI Governance into Business Enablers</div>
                         <p className="text-foreground/60 text-sm leading-relaxed">Focused governance support that helps your teams manage risk without disrupting the business.</p>
                     </div>
                     <div className="space-y-4">
                         {proofPoints.map((point) => (
                             <div key={point.label} className="flex items-center gap-3">
-                                <point.icon className="h-5 w-5 text-neon-green" />
-                                <span className="text-sm font-medium text-foreground/70">{point.label}</span>
+                                <point.icon className="h-5 w-5 text-brand-orange" />
+                                <span className="text-sm font-semibold text-foreground/70">{point.label}</span>
                             </div>
                         ))}
                     </div>

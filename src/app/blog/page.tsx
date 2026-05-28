@@ -13,13 +13,13 @@ const BlogPage = () => {
         <main className="min-h-screen bg-background text-foreground">
             <Navbar />
 
-            <section className="border-b border-card-border pt-40 pb-20">
+            <section className="border-b border-card-border pt-28 pb-14 md:pt-32 md:pb-20">
                 <div className="container mx-auto px-6">
                     <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
                         <div className="mb-6 inline-flex border-l-2 border-neon-blue pl-4">
                             <span className="text-sm font-medium text-foreground/60">Articles</span>
                         </div>
-                        <h1 className="mb-8 text-5xl font-semibold text-foreground md:text-7xl">
+                        <h1 className="mb-8 text-4xl font-black text-foreground md:text-6xl">
                             Article & Case Studies
                         </h1>
                         <p className="max-w-3xl text-xl leading-relaxed text-foreground/65">
@@ -50,7 +50,7 @@ const BlogPage = () => {
                                 </div>
                             </Link>
                             <div className="p-7">
-                                <div className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-widest text-foreground/40">
+                                <div className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0] text-foreground/40">
                                     <Newspaper className="h-4 w-4 text-neon-blue" />
                                     <span>{post.date}</span>
                                     <span>No Comments</span>

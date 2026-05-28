@@ -28,7 +28,7 @@ const ContactPage = () => {
                                         <Mail className="w-6 h-6 text-neon-blue" />
                                     </div>
                                     <div>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest text-foreground/30">Email Us</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-[0] text-foreground/30">Email Us</p>
                                         <p className="text-lg font-bold text-foreground">info@aipurview.com</p>
                                     </div>
                                 </div>
@@ -38,7 +38,7 @@ const ContactPage = () => {
                                         <MapPin className="w-6 h-6 text-neon-blue" />
                                     </div>
                                     <div>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest text-foreground/30">Location</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-[0] text-foreground/30">Location</p>
                                         <p className="text-lg font-bold text-foreground">Remote First - Serving the EU</p>
                                     </div>
                                 </div>
@@ -48,7 +48,7 @@ const ContactPage = () => {
                                         <Globe className="w-6 h-6 text-eu-blue" />
                                         <div>
                                             <p className="text-xs font-bold text-foreground leading-none">EU-Wide Delivery</p>
-                                            <p className="text-[10px] text-foreground/50 uppercase tracking-tighter mt-1">Multi-language support available</p>
+                                            <p className="text-[10px] text-foreground/50 uppercase tracking-[0]er mt-1">Multi-language support available</p>
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@ const ContactPage = () => {
                                 <form className="relative z-10 space-y-8">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div className="space-y-2">
-                                            <label className="text-xs font-bold uppercase tracking-widest text-foreground/40 ml-4">Full Name</label>
+                                            <label className="text-xs font-bold uppercase tracking-[0] text-foreground/40 ml-4">Full Name</label>
                                             <input
                                                 type="text"
                                                 placeholder="John Doe"
@@ -71,7 +71,7 @@ const ContactPage = () => {
                                             />
                                         </div>
                                         <div className="space-y-2">
-                                            <label className="text-xs font-bold uppercase tracking-widest text-foreground/40 ml-4">Work Email</label>
+                                            <label className="text-xs font-bold uppercase tracking-[0] text-foreground/40 ml-4">Work Email</label>
                                             <input
                                                 type="email"
                                                 placeholder="john@company.com"
@@ -81,7 +81,7 @@ const ContactPage = () => {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold uppercase tracking-widest text-foreground/40 ml-4">Service Interest</label>
+                                        <label className="text-xs font-bold uppercase tracking-[0] text-foreground/40 ml-4">Service Interest</label>
                                         <select className="w-full bg-foreground/5 border border-card-border rounded-2xl py-4 px-6 focus:outline-none focus:border-neon-blue/50 transition-all text-foreground appearance-none cursor-pointer">
                                             <option className="bg-background">vCISO (Fractional Leadership)</option>
                                             <option className="bg-background">AI Governance & Compliance</option>
@@ -91,7 +91,7 @@ const ContactPage = () => {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold uppercase tracking-widest text-foreground/40 ml-4">How can we help?</label>
+                                        <label className="text-xs font-bold uppercase tracking-[0] text-foreground/40 ml-4">How can we help?</label>
                                         <textarea
                                             rows={4}
                                             placeholder="Tell us about your project or security concerns..."

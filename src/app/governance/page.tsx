@@ -76,36 +76,39 @@ const GovernancePage = () => {
         <main className="bg-background min-h-screen">
             <Navbar />
 
-            <section className="pt-40 pb-20 relative border-b border-card-border">
+            <section className="relative overflow-hidden border-b border-card-border pt-28 pb-14 md:pt-32 md:pb-20">
                 <div className="container mx-auto px-6">
-                    <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
-                        <div className="mb-5 text-sm font-medium text-neon-blue">Our Services: AI Governance as a Service</div>
-                        <h1 className="text-5xl md:text-7xl font-semibold mb-8 text-foreground">
-                            AI Governance & Assurance
-                        </h1>
-                        <p className="text-foreground/65 text-xl leading-relaxed mb-8">
-                            Standardize responsible AI across your organization and proactively eliminate compliance gaps before they scale.
-                        </p>
-                        <p className="text-foreground/60 text-lg leading-relaxed max-w-3xl">
-                            Unify your AI innovation goals with a robust security and privacy posture. AI Governance is the cornerstone of responsible innovation, merging a robust technology platform with strategic advisory to help you navigate risks, ensure global compliance, and embed ethical integrity across your enterprise.
-                        </p>
-                        <a href="/contact" className="btn-primary mt-10 inline-flex">
-                            Request a Free Risk Assessment
-                        </a>
-                    </motion.div>
+                    <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="max-w-5xl">
+                            <div className="mb-6 inline-flex items-center gap-3 rounded-md border border-card-border bg-card-bg px-4 py-3">
+                                <span className="h-2.5 w-2.5 rounded-full bg-brand-orange" />
+                                <span className="text-sm font-bold text-foreground/62">Our Services: AI Governance as a Service</span>
+                            </div>
+                            <h1 className="text-[clamp(2.75rem,5.6vw,5.75rem)] font-black leading-[1] tracking-[0] text-foreground">
+                                AI Governance & Assurance
+                            </h1>
+                            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/66 md:text-xl">
+                                Standardize responsible AI across your organization and proactively eliminate compliance gaps before they scale.
+                            </p>
+                            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-foreground/58">
+                                Unify your AI innovation goals with a robust security and privacy posture. AI Governance is the cornerstone of responsible innovation, merging a robust technology platform with strategic advisory to help you navigate risks, ensure global compliance, and embed ethical integrity across your enterprise.
+                            </p>
+                            <a href="/contact" className="btn-primary mt-10 inline-flex">
+                                Request a Free Risk Assessment
+                            </a>
+                        </motion.div>
                 </div>
             </section>
 
             <Section>
                 <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
                     <div>
-                        <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-foreground">Why Our AI Governance as a Service?</h2>
+                        <h2 className="text-3xl md:text-5xl font-black mb-6 text-foreground">Why Our AI Governance as a Service?</h2>
                         <p className="text-foreground/60 leading-relaxed">
                             Your AI is only as safe as its weakest governance guardrail. In a rapidly shifting regulatory landscape, a single governance gap can derail your AI transformation. We help organizations master AI compliance solutions by bridging innovation with global standards like NIST AI RMF, ISO/IEC 42001, MITRE ATLAS, and OWASP.
                         </p>
                     </div>
                     <div className="glass-card p-8">
-                        <h3 className="mb-4 text-2xl font-semibold text-foreground">Master AI compliance and ethics</h3>
+                        <h3 className="mb-4 text-2xl font-black text-foreground">Master AI compliance and ethics</h3>
                         <p className="text-foreground/60 leading-relaxed">
                             Our AI Governance as a Service merges a robust security platform with strategic AI advisory to neutralize risks and accelerate trust. Our Responsible AI frameworks go beyond checklists, delivering a strategic defense across model resilience, ethical development, and data stewardship.
                         </p>
@@ -113,17 +116,17 @@ const GovernancePage = () => {
                 </div>
             </Section>
 
-            <Section className="bg-dark-charcoal/30">
+            <Section className="bg-dark-charcoal border-y border-card-border">
                 <div className="text-center mb-14">
-                    <h2 className="text-3xl md:text-5xl font-semibold mb-5 text-foreground">Our 4-Step AI Security and Compliance Framework</h2>
+                    <h2 className="text-3xl md:text-5xl font-black mb-5 text-foreground">Our 4-Step AI Security and Compliance Framework</h2>
                     <p className="text-foreground/60">We simplify complex compliance and security requirements into a manageable, continuous process.</p>
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                     {frameworkSteps.map((step, index) => (
                         <motion.div key={step.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.08 }} viewport={{ once: true }} className="glass-card p-7">
-                            <step.icon className="mb-6 h-8 w-8 text-neon-blue" />
-                            <div className="mb-3 text-sm font-semibold text-foreground/35">0{index + 1}</div>
-                            <h3 className="mb-4 text-lg font-semibold text-foreground">{step.title}</h3>
+                            <step.icon className="mb-6 h-8 w-8 text-brand-orange" />
+                            <div className="mb-3 text-sm font-black text-brand-orange/45">0{index + 1}</div>
+                            <h3 className="mb-4 text-lg font-bold text-foreground">{step.title}</h3>
                             <p className="text-sm leading-relaxed text-foreground/60">{step.description}</p>
                         </motion.div>
                     ))}
@@ -132,29 +135,29 @@ const GovernancePage = () => {
 
             <Section>
                 <div className="mb-12 max-w-3xl">
-                    <h2 className="text-3xl md:text-5xl font-semibold mb-5 text-foreground">What We Offer</h2>
+                    <h2 className="text-3xl md:text-5xl font-black mb-5 text-foreground">What We Offer</h2>
                     <p className="text-foreground/60">Partner with us for AI Governance and Risk, you will:</p>
                 </div>
                 <div className="grid gap-5 md:grid-cols-2">
                     {offers.map((offer) => (
                         <div key={offer.title} className="glass-card p-7">
-                            <CheckCircle className="mb-5 h-7 w-7 text-neon-green" />
-                            <h3 className="mb-3 text-xl font-semibold text-foreground">{offer.title}</h3>
+                            <CheckCircle className="mb-5 h-7 w-7 text-brand-orange" />
+                            <h3 className="mb-3 text-xl font-bold text-foreground">{offer.title}</h3>
                             <p className="text-sm leading-relaxed text-foreground/60">{offer.description}</p>
                         </div>
                     ))}
                 </div>
             </Section>
 
-            <Section className="bg-dark-charcoal/30">
+            <Section className="bg-dark-charcoal border-y border-card-border">
                 <div className="mb-12 max-w-3xl">
-                    <h2 className="text-3xl md:text-5xl font-semibold mb-5 text-foreground">Frequently Asked Questions</h2>
+                    <h2 className="text-3xl md:text-5xl font-black mb-5 text-foreground">Frequently Asked Questions</h2>
                     <p className="text-foreground/60">Ensure that as your AI ecosystem grows, your ethical guardrails and security hygiene scale alongside it.</p>
                 </div>
                 <div className="space-y-5">
                     {faqs.map((faq) => (
                         <div key={faq.question} className="glass-card p-7">
-                            <h3 className="mb-3 text-lg font-semibold text-foreground">{faq.question}</h3>
+                            <h3 className="mb-3 text-lg font-bold text-foreground">{faq.question}</h3>
                             <p className="text-sm leading-relaxed text-foreground/60">{faq.answer}</p>
                         </div>
                     ))}

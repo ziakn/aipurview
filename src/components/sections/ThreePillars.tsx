@@ -11,21 +11,21 @@ const pillars = [
         description: "Embed Security and Privacy oversight into AI systems to ensure compliance with AI regulations.",
         icon: Gavel,
         href: "/ai-risk-and-governance",
-        color: "text-neon-blue",
+        color: "text-brand-orange",
     },
     {
         title: "AI Security Assessment",
         description: "Evaluate AI ecosystem to identify vulnerabilities, mitigate adversarial risks and ensure alignment with standards.",
         icon: ShieldAlert,
         href: "/architecture",
-        color: "text-neon-green",
+        color: "text-brand-orange",
     },
     {
         title: "AI Trainings and Workshops",
         description: "Collaborative trainings to align stakeholders, define safeguards, and operationalize AI security with confidence.",
         icon: GraduationCap,
         href: "/training",
-        color: "text-neon-purple",
+        color: "text-brand-orange",
     },
 ];
 
@@ -40,17 +40,17 @@ const ThreePillars = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="glass-card p-8 transition-colors duration-200 hover:border-foreground/25 group"
+                        className="glass-card p-8 transition-colors duration-200 hover:border-brand-orange group"
                     >
                         <pillar.icon className={`w-9 h-9 ${pillar.color} mb-8`} />
-                        <h3 className="text-2xl font-semibold mb-4 text-foreground">{pillar.title}</h3>
+                        <h3 className="text-2xl font-black mb-4 text-foreground">{pillar.title}</h3>
                         <p className="text-foreground/60 mb-8 leading-relaxed">
                             {pillar.description}
                         </p>
 
                         <Link
                             href={pillar.href}
-                            className="inline-flex items-center space-x-2 text-sm font-semibold text-foreground hover:text-neon-blue transition-colors"
+                            className="inline-flex items-center space-x-2 text-sm font-bold text-foreground hover:text-brand-orange transition-colors"
                         >
                             <span>Explore {pillar.title}</span>
                             <ArrowRight className="w-4 h-4" />

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Terminal, Shield, Zap, Lock, Code2, Database } from "lucide-react";
+import { Code2, Database, Lock, Shield, Terminal, Zap } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Section from "@/components/ui/Section";
@@ -27,58 +27,35 @@ const services = [
     },
 ];
 
-const trainingModules = [
-    {
-        title: "AI Threat Modeling",
-        role: "Engineers & Architects",
-        focus: "Identify and mitigate risks in AI systems.",
-        icon: Shield,
-    },
-    {
-        title: "Secure Prompt Engineering",
-        role: "Developers & Data Scientists",
-        focus: "Craft resilient prompts against adversarial attacks.",
-        icon: Code2,
-    },
-    {
-        title: "AI Governance & Compliance",
-        role: "Leadership & Legal",
-        focus: "Navigate regulatory landscapes for AI deployments.",
-        icon: Lock,
-    },
-];
-
 const ArchitecturePage = () => {
     return (
         <main className="bg-background min-h-screen text-foreground">
             <Navbar />
 
-            {/* Dark Mode Containers emphasized for technical feel */}
-            <section className="pt-40 pb-32 relative bg-background overflow-hidden border-b border-card-border">
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,rgba(46,204,113,0.05)_0%,transparent_50%)]" />
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="max-w-4xl">
+            <section className="relative overflow-hidden border-b border-card-border bg-background pt-28 pb-14 md:pt-32 md:pb-20">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-5xl">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="flex items-center space-x-3 mb-6"
+                            className="mb-6 inline-flex items-center gap-3 rounded-md border border-card-border bg-card-bg px-4 py-3"
                         >
-                            <Zap className="w-5 h-5 text-neon-green fill-neon-green" />
-                            <span className="text-neon-green font-mono text-sm tracking-widest uppercase">Deep-Tech Security Defense</span>
+                            <Zap className="h-5 w-5 text-brand-orange" />
+                            <span className="text-sm font-bold uppercase text-foreground/62">Deep-Tech Security Defense</span>
                         </motion.div>
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-6xl md:text-8xl font-black mb-8 tracking-tighter text-foreground"
+                            className="text-[clamp(2.75rem,5.6vw,5.75rem)] font-black leading-[1] tracking-[0] text-foreground"
                         >
-                            THE <span className="text-foreground/20">HARDENING</span>
+                            THE <span className="text-foreground/25">HARDENING</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-xl text-foreground/50 leading-relaxed font-body max-w-2xl"
+                            className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/58 md:text-xl"
                         >
                             Beyond policy. We provide the technical enforcement required to deploy AI systems that are resilient to adversarial threats.
                         </motion.p>
@@ -86,8 +63,7 @@ const ArchitecturePage = () => {
                 </div>
             </section>
 
-            {/* Technical Services Grid */}
-            <Section className="bg-card-bg/20">
+            <Section>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <motion.div
@@ -96,21 +72,21 @@ const ArchitecturePage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="p-10 bg-card-bg border border-card-border rounded-3xl hover:border-neon-green/30 transition-all duration-500 hover:shadow-[0_0_30px_rgba(46,204,113,0.1)] group"
+                            className="glass-card p-8 transition-colors duration-200 hover:border-brand-orange group"
                         >
                             <div className="flex justify-between items-start mb-8">
-                                <div className="w-14 h-14 rounded-xl bg-neon-green/10 border border-neon-green/20 flex items-center justify-center">
-                                    <service.icon className="w-7 h-7 text-neon-green" />
+                                <div className="w-12 h-12 rounded-md bg-dark-charcoal border border-card-border flex items-center justify-center">
+                                    <service.icon className="w-6 h-6 text-brand-orange" />
                                 </div>
-                                <span className="text-[10px] font-mono text-foreground/30 uppercase tracking-[0.2em] border border-card-border px-3 py-1 rounded-full">
+                                <span className="text-[10px] font-bold text-foreground/45 uppercase border border-card-border px-3 py-1 rounded-md">
                                     {service.tag}
                                 </span>
                             </div>
-                            <h3 className="text-2xl font-bold mb-4 text-foreground">{service.title}</h3>
-                            <p className="text-foreground/40 leading-relaxed text-sm mb-8">
+                            <h3 className="text-2xl font-black mb-4 text-foreground">{service.title}</h3>
+                            <p className="text-foreground/60 leading-relaxed text-sm mb-8">
                                 {service.description}
                             </p>
-                            <div className="flex items-center space-x-2 text-neon-green font-mono text-[10px] uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+                            <div className="flex items-center space-x-2 text-brand-orange font-bold text-[11px] uppercase group-hover:translate-x-2 transition-transform">
                                 <code>{service.title.toLowerCase().replace(" ", "_")}.assess()</code>
                             </div>
                         </motion.div>
@@ -118,12 +94,11 @@ const ArchitecturePage = () => {
                 </div>
             </Section>
 
-            {/* Engineering Showcase */}
-            <Section>
-                <div className="glass-card overflow-hidden border-neon-green/10">
+            <Section className="bg-dark-charcoal border-y border-card-border">
+                <div className="glass-card overflow-hidden">
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <div className="p-12 text-foreground">
-                            <h2 className="text-3xl font-bold mb-6">Secure-by-Design <br />Pipelines</h2>
+                            <h2 className="text-3xl font-black mb-6">Secure-by-Design <br />Pipelines</h2>
                             <div className="space-y-6">
                                 {[
                                     { icon: Code2, label: "API Hardening", desc: "Encryption & Rate Limiting" },
@@ -132,19 +107,18 @@ const ArchitecturePage = () => {
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center space-x-4">
                                         <div className="p-2 bg-foreground/5 rounded-lg">
-                                            <item.icon className="w-5 h-5 text-neon-green" />
+                                            <item.icon className="w-5 h-5 text-brand-orange" />
                                         </div>
                                         <div>
-                                            <p className="font-bold text-sm uppercase tracking-widest">{item.label}</p>
+                                            <p className="font-bold text-sm uppercase">{item.label}</p>
                                             <p className="text-xs text-foreground/40">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-gradient-to-br from-neon-green/10 to-transparent p-12 flex items-center justify-center border-l border-card-border">
+                        <div className="border-l border-card-border bg-background p-12 flex items-center justify-center">
                             <div className="relative">
-                                <div className="absolute inset-0 bg-neon-green rounded-full blur-[60px] opacity-20" />
                                 <Terminal className="w-48 h-48 text-foreground/10" />
                             </div>
                         </div>

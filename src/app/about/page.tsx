@@ -36,13 +36,13 @@ const AboutPage = () => {
         <main className="bg-background min-h-screen text-foreground">
             <Navbar />
 
-            <section className="pt-40 pb-20 border-b border-card-border">
+            <section className="pt-28 pb-14 md:pt-32 md:pb-20 border-b border-card-border">
                 <div className="container mx-auto px-6">
                     <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
                         <div className="mb-6 inline-flex border-l-2 border-neon-blue pl-4">
                             <span className="text-sm font-medium text-foreground/60">About Us</span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-semibold mb-8 leading-tight text-foreground">
+                        <h1 className="text-4xl md:text-6xl font-black mb-8 leading-tight text-foreground">
                             We help you achieve your objectives.
                         </h1>
                         <p className="text-xl leading-relaxed text-foreground/65 max-w-3xl">

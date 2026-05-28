@@ -21,9 +21,9 @@ export default function Home() {
       <FAQ />
 
       {/* CTA Section */}
-      <section className="py-24 bg-dark-charcoal/60 border-y border-card-border">
+      <section className="py-16 md:py-20 bg-dark-charcoal border-y border-card-border">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl font-semibold mb-8 text-foreground max-w-3xl">AI Governance you can prove, AI Risk you can manage.</h2>
+          <h2 className="text-3xl md:text-5xl font-black mb-8 text-foreground max-w-3xl">AI Governance you can prove, AI Risk you can manage.</h2>
           <p className="text-foreground/60 text-lg mb-12 max-w-2xl">
             As you integrate AI, our Governance Services ensure compliance, protect data, and accelerate innovation.
           </p>

@@ -31,7 +31,7 @@ const Process = () => {
     return (
         <Section className="bg-background">
             <div className="text-center mb-20">
-                <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-foreground">Turning Governance Into Execution</h2>
+                <h2 className="text-3xl md:text-5xl font-black mb-6 text-foreground">Turning Governance Into Execution</h2>
                 <p className="text-foreground/60 max-w-2xl mx-auto">
                     We help organizations translate strategy into execution, quantifying cyber risk, enhancing maturity and enabling trusted outcomes.
                 </p>
@@ -47,13 +47,13 @@ const Process = () => {
                         viewport={{ once: true }}
                         className="relative p-7 glass-card border-card-border"
                     >
-                        <div className="text-foreground/20 text-4xl font-semibold absolute top-6 right-6">
+                        <div className="text-brand-orange/35 text-4xl font-black absolute top-6 right-6">
                             0{index + 1}
                         </div>
                         <div className="w-11 h-11 rounded-md bg-dark-charcoal border border-card-border flex items-center justify-center mb-8">
-                            <step.icon className="w-5 h-5 text-neon-blue" />
+                            <step.icon className="w-5 h-5 text-brand-orange" />
                         </div>
-                        <h3 className="text-lg font-semibold mb-4 text-foreground">{step.title}</h3>
+                        <h3 className="text-lg font-bold mb-4 text-foreground">{step.title}</h3>
                         <p className="text-foreground/60 text-sm leading-relaxed">
                             {step.description}
                         </p>

@@ -51,7 +51,7 @@ const PrivacyPage = () => {
                     >
                         <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-neon-blue/30 bg-neon-blue/10 mb-8">
                             <Lock className="w-4 h-4 text-neon-blue" />
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-neon-blue">Trust & Transparency</span>
+                            <span className="text-[10px] font-bold uppercase tracking-[0] text-neon-blue">Trust & Transparency</span>
                         </div>
                         <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
                             Privacy <br />
@@ -69,7 +69,7 @@ const PrivacyPage = () => {
                     {/* Sticky ToC Sidebar */}
                     <div className="lg:w-1/4">
                         <div className="sticky top-32 space-y-2">
-                            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/30 mb-6 ml-4">Table of Contents</p>
+                            <p className="text-[10px] font-bold uppercase tracking-[0] text-foreground/30 mb-6 ml-4">Table of Contents</p>
                             {sections.map((section) => (
                                 <button
                                     key={section.id}
@@ -124,7 +124,7 @@ const PrivacyPage = () => {
                         <div className="pt-10 border-t border-card-border flex items-center justify-between">
                             <p className="text-foreground/30 text-xs">Last Updated: February 4, 2026</p>
                             <div className="flex items-center space-x-4">
-                                <span className="text-foreground/30 text-xs uppercase tracking-widest font-bold">Share Policy</span>
+                                <span className="text-foreground/30 text-xs uppercase tracking-[0] font-bold">Share Policy</span>
                                 <button className="p-2 bg-foreground/5 rounded-lg hover:text-neon-blue transition-colors">
                                     <Share2 className="w-4 h-4" />
                                 </button>

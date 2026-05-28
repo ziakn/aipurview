@@ -51,7 +51,7 @@ const TermsPage = () => {
                     >
                         <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-neon-green/30 bg-neon-green/10 mb-8">
                             <Scale className="w-4 h-4 text-neon-green" />
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-neon-green">Governance Framework</span>
+                            <span className="text-[10px] font-bold uppercase tracking-[0] text-neon-green">Governance Framework</span>
                         </div>
                         <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
                             Terms of <br />
@@ -69,7 +69,7 @@ const TermsPage = () => {
                     {/* Sticky ToC Sidebar */}
                     <div className="lg:w-1/4">
                         <div className="sticky top-32 space-y-2">
-                            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/30 mb-6 ml-4">Clause Directory</p>
+                            <p className="text-[10px] font-bold uppercase tracking-[0] text-foreground/30 mb-6 ml-4">Clause Directory</p>
                             {clauses.map((clause) => (
                                 <button
                                     key={clause.id}

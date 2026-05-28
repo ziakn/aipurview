@@ -29,10 +29,10 @@ const advantages = [
 
 const Expertise = () => {
     return (
-        <Section className="bg-background">
+        <Section className="bg-dark-charcoal border-y border-card-border">
             <div className="flex flex-col lg:flex-row gap-16 items-center">
                 <div className="lg:w-1/2">
-                    <h2 className="text-3xl md:text-5xl font-semibold mb-8 leading-tight text-foreground">
+                    <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-foreground">
                         Tailored AI Governance Services Aligned with Your Strategic Objectives
                     </h2>
                     <p className="text-foreground/65 text-lg mb-10 leading-relaxed">
@@ -49,8 +49,8 @@ const Expertise = () => {
                                 className="space-y-3"
                             >
                                 <div className="flex items-center space-x-3">
-                                    <adv.icon className="w-5 h-5 text-neon-green" />
-                                    <h4 className="font-semibold text-foreground">{adv.title}</h4>
+                                    <adv.icon className="w-5 h-5 text-brand-orange" />
+                                    <h4 className="font-bold text-foreground">{adv.title}</h4>
                                 </div>
                                 <p className="text-foreground/60 text-sm">{adv.description}</p>
                             </motion.div>
@@ -67,7 +67,7 @@ const Expertise = () => {
                                         {index + 1}
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-foreground">{item}</h3>
+                                        <h3 className="font-bold text-foreground">{item}</h3>
                                         <p className="mt-1 text-sm text-foreground/55">
                                             AIPurview empowers organizations to harness AI responsibly without disrupting the business.
                                         </p>

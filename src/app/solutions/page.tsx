@@ -62,11 +62,11 @@ const SolutionsPage = () => {
             <section className="pt-40 pb-24 border-b border-card-border bg-background">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl">
-                        <div className="inline-flex items-center gap-2 mb-6 text-neon-blue text-sm font-semibold uppercase tracking-widest">
+                        <div className="inline-flex items-center gap-2 mb-6 text-neon-blue text-sm font-semibold uppercase tracking-[0]">
                             <Layers className="w-5 h-5" />
                             Tailored AI Systems
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-semibold tracking-tight mb-8 text-foreground">
+                        <h1 className="text-5xl md:text-7xl font-semibold tracking-[0] mb-8 text-foreground">
                             AI models built around your business, data, and risk reality.
                         </h1>
                         <p className="text-lg md:text-xl text-foreground/60 leading-relaxed max-w-3xl mb-10">
@@ -108,7 +108,7 @@ const SolutionsPage = () => {
             <Section>
                 <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
                     <div>
-                        <div className="inline-flex items-center gap-2 mb-5 text-neon-green text-sm font-semibold uppercase tracking-widest">
+                        <div className="inline-flex items-center gap-2 mb-5 text-neon-green text-sm font-semibold uppercase tracking-[0]">
                             <Rocket className="w-5 h-5" />
                             Model Delivery
                         </div>

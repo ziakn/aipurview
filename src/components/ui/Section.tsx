@@ -15,7 +15,7 @@ interface SectionProps {
 
 const Section = ({ children, className, id, container = true }: SectionProps) => {
     return (
-        <section id={id} className={cn("py-24 md:py-32 overflow-hidden", className)}>
+        <section id={id} className={cn("py-16 md:py-20 overflow-hidden", className)}>
             {container ? (
                 <div className="container mx-auto px-6">
                     {children}
