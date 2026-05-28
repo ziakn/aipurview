@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed left-0 right-0 top-0 z-50 border-b border-card-border bg-background/95 transition-all duration-200 ${isScrolled ? "py-3 shadow-sm" : "py-4"
+            className={`fixed left-0 right-0 top-0 z-50 border-b border-card-border bg-background/95 transition-all duration-200 ${isScrolled ? "py-3" : "py-4"
                 }`}
         >
             <div className="mx-auto flex max-w-[1600px] items-center justify-between px-5 md:px-10 xl:px-16">

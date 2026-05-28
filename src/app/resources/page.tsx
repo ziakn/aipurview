@@ -85,15 +85,15 @@ const ResourcesPage = () => {
                     <BookOpen className="w-5 h-5 text-neon-blue" />
                     <h2 className="text-xl font-bold uppercase tracking-[0] text-foreground/80">Upcoming Publication</h2>
                 </div>
-                <div className="glass-card p-12 bg-gradient-to-br from-neon-blue/20 via-transparent to-transparent flex flex-col md:flex-row items-center gap-12 border-neon-blue/20 relative overflow-hidden group">
+                <div className="glass-card p-12 flex flex-col md:flex-row items-center gap-12 border-card-border relative overflow-hidden group">
                     <div className="absolute top-0 right-0 p-8">
                         <div className="px-4 py-1.5 bg-neon-blue text-white text-[10px] font-black uppercase tracking-[0] rounded-full">
                             Featured Book
                         </div>
                     </div>
                     <div className="md:w-1/3">
-                        <div className="aspect-[3/4] bg-foreground/5 border border-card-border rounded-xl shadow-2xl relative overflow-hidden group-hover:rotate-2 transition-transform duration-500">
-                            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background to-transparent">
+                        <div className="aspect-[3/4] bg-foreground/5 border border-card-border rounded-xl relative overflow-hidden">
+                            <div className="absolute bottom-0 left-0 right-0 p-6 bg-background">
                                 <p className="text-xs font-bold text-neon-blue uppercase tracking-[0] mb-2">Pre-Order Soon</p>
                                 <h3 className="text-xl font-bold leading-tight text-foreground">Mastering AI Governance</h3>
                             </div>

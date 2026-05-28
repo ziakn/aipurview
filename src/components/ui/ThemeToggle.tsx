@@ -25,7 +25,7 @@ export function ThemeToggle() {
             aria-label="Toggle theme"
         >
             <motion.div
-                className="w-5 h-5 rounded-full bg-background flex items-center justify-center shadow-sm z-10"
+                className="w-5 h-5 rounded-full bg-background flex items-center justify-center z-10"
                 initial={false}
                 animate={{
                     x: isDark ? 28 : 0,

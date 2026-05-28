@@ -40,8 +40,7 @@ const TermsPage = () => {
 
             {/* Premium Header */}
             <section className="pt-48 pb-24 relative overflow-hidden border-b border-card-border">
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.05] dark:opacity-[0.02]" />
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(46,204,113,0.05)_0%,transparent_100%)]" />
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] dark:opacity-[0.02]" />
 
                 <div className="container mx-auto px-6 relative z-10">
                     <motion.div
@@ -55,7 +54,7 @@ const TermsPage = () => {
                         </div>
                         <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
                             Terms of <br />
-                            <span className="bg-gradient-to-r from-neon-green to-neon-blue bg-clip-text text-transparent">Use</span>
+                            <span className="text-neon-green">Use</span>
                         </h1>
                         <p className="text-foreground/50 text-xl leading-relaxed">
                             The legal foundation for elite AI security consulting and digital engagement.

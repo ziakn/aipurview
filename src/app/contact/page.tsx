@@ -58,8 +58,6 @@ const ContactPage = () => {
                         {/* Contact Form */}
                         <div className="lg:w-2/3">
                             <div className="glass-card p-12 border-card-border relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-neon-blue/5 rounded-full blur-[100px] -mr-32 -mt-32" />
-
                                 <form className="relative z-10 space-y-8">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div className="space-y-2">
