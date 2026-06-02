@@ -1,7 +1,7 @@
 const TrustBar = () => {
     return (
         <section className="border-b border-card-border bg-dark-charcoal">
-            <div className="container mx-auto grid gap-6 px-6 py-14 md:grid-cols-[0.7fr_1.3fr] md:gap-12">
+            <div className="mx-auto grid max-w-[1180px] gap-6 px-7 py-14 md:grid-cols-[0.7fr_1.3fr] md:gap-12">
                 <div className="text-sm font-bold uppercase tracking-[0.14em] text-foreground/50">
                     The AI Governance
                     <span className="mt-1 block text-3xl font-black normal-case tracking-normal text-brand-orange">Dilemma</span>

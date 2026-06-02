@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <footer className="border-t border-white/10 bg-[#2a1467] pb-8 pt-14 text-[#c3bcdd]">
-            <div className="container mx-auto grid grid-cols-1 gap-10 px-6 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+            <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-10 px-7 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
                 <div>
                     <Link href="/" aria-label="AIPurview home">
                         <Image
@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto mt-11 flex flex-col gap-2 border-t border-white/10 px-6 pt-5 text-xs text-[#8d82ad] sm:flex-row sm:justify-between">
+            <div className="mx-auto mt-11 flex max-w-[1180px] flex-col gap-2 border-t border-white/10 px-7 pt-5 text-xs text-[#8d82ad] sm:flex-row sm:justify-between">
                 <p>© {new Date().getFullYear()} AIPurview. All rights reserved.</p>
                 <p>Govern. Assess. Secure AI.</p>
             </div>

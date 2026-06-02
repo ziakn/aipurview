@@ -63,8 +63,8 @@ const ValueProposition = () => {
                 </div>
             </Section>
 
-            <section className="bg-background px-6 pb-16 md:pb-20">
-                <div className="container mx-auto grid gap-8 rounded-2xl bg-[#2a1467] p-8 text-white md:p-12 lg:grid-cols-2 lg:items-center">
+            <section className="mx-auto max-w-[1180px] px-7 pb-16 md:pb-20">
+                <div className="grid gap-8 rounded-2xl bg-[#2a1467] p-8 text-white md:p-12 lg:grid-cols-2 lg:items-center">
                     <div>
                         <div className="text-xs font-bold uppercase tracking-[0.16em] text-[#f3b98a]">Your Experienced Partner</div>
                         <h2 className="mt-4 text-3xl font-black leading-tight text-white md:text-4xl">Turning AI Governance into a Business Enabler.</h2>

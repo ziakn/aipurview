@@ -17,7 +17,7 @@ const Section = ({ children, className, id, container = true }: SectionProps) =>
     return (
         <section id={id} className={cn("py-16 md:py-20 overflow-hidden", className)}>
             {container ? (
-                <div className="container mx-auto px-6">
+                <div className="mx-auto max-w-[1180px] px-7">
                     {children}
                 </div>
             ) : (

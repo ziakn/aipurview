@@ -6,7 +6,7 @@ import Link from "next/link";
 const Hero = () => {
     return (
         <section className="relative overflow-hidden border-b border-card-border bg-background pt-28 md:pt-36">
-            <div className="container mx-auto grid gap-10 px-6 pb-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:pb-20">
+            <div className="mx-auto grid max-w-[1180px] gap-10 px-7 pb-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:pb-20">
                 <motion.div
                     initial={{ opacity: 0, y: 18 }}
                     animate={{ opacity: 1, y: 0 }}

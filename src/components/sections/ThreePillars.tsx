@@ -12,17 +12,17 @@ const reasons = [
     },
     {
         title: "Enterprise-Grade Governance, Without the Overhead",
-        description: "You face the same AI regulations as the largest firms, rarely with the same budget. We bridge that gap with focused, right-sized support free of consulting bloat.",
+        description: "You face the same AI regulations as the largest firms, rarely with the same budget. We bridge that gap with focused, right-sized support — free of consulting bloat.",
         icon: Scale,
     },
     {
         title: "A Decade of Regulated-Industry Experience",
-        description: "Ten-plus years partnering with banks, insurers, and fintechs on governance, risk, and compliance, so we already understand your regulators and your pressures.",
+        description: "Ten-plus years partnering with banks, insurers, and fintechs on governance, risk, and compliance — so we already understand your regulators and your pressures.",
         icon: Building2,
     },
     {
         title: "AI Specialists, Not Latecomers",
-        description: "Our consultants were building and scaling AI systems long before generative AI hit the headlines, from model development and explainability to enterprise AI strategy.",
+        description: "Our consultants were building and scaling AI systems long before generative AI hit the headlines — from model development and explainability to enterprise AI strategy.",
         icon: Sparkles,
     },
     {
@@ -32,7 +32,7 @@ const reasons = [
     },
     {
         title: "Practitioner-Led, Regulator-Aware",
-        description: "We combine technical, legal, and policy expertise with a clear view of what auditors, regulators, and boards expect, so we speak both languages fluently.",
+        description: "We combine technical, legal, and policy expertise with a clear view of what auditors, regulators, and boards expect — so we speak both languages fluently.",
         icon: BadgeCheck,
     },
 ];
@@ -44,7 +44,7 @@ const ThreePillars = () => {
                 <div className="text-xs font-bold uppercase tracking-[0.16em] text-brand-orange">Why AIPurview</div>
                 <h2 className="mt-4 text-3xl font-black leading-tight text-foreground md:text-5xl">AI governance partners who&apos;ve done the work, not just the theory.</h2>
                 <p className="mt-5 text-lg leading-relaxed text-foreground/65">
-                    A decade of regulated-industry experience combined with deep, hands-on AI expertise, so you can adopt AI responsibly, prove compliance, and scale with confidence.
+                    A decade of regulated-industry experience combined with deep, hands-on AI expertise — so you can adopt AI responsibly, prove compliance, and scale with confidence.
                 </p>
             </div>
             <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -57,7 +57,9 @@ const ThreePillars = () => {
                         viewport={{ once: true }}
                         className="glass-card p-6"
                     >
-                        <reason.icon className="mb-5 h-7 w-7 text-brand-orange" />
+                        <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg bg-[#2a1467]">
+                            <reason.icon className="h-6 w-6 text-[#f3b98a]" />
+                        </div>
                         <h3 className="text-lg font-bold leading-tight text-foreground">{reason.title}</h3>
                         <p className="mt-3 text-sm leading-relaxed text-foreground/60">{reason.description}</p>
                     </motion.div>
