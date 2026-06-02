@@ -1,82 +1,65 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Target, Zap, ShieldCheck } from "lucide-react";
+import { ArrowRight, GraduationCap, Search, ShieldCheck, UserRound } from "lucide-react";
+import Link from "next/link";
 import Section from "../ui/Section";
 
-const advantages = [
+const services = [
     {
         title: "AI Governance & Assurance",
-        description: "Embed Security and Privacy oversight into AI systems to ensure compliance with AI regulations.",
-        icon: Target,
-    },
-    {
-        title: "AI Trainings and Workshops",
-        description: "Collaborative trainings to align stakeholders, define safeguards, and operationalize AI security with confidence.",
-        icon: Zap,
-    },
-    {
-        title: "vCISO Leadership & Security Strategy",
-        description: "Executive-level security oversight, strategic roadmaps and board-facing risk reporting.",
-        icon: Award,
-    },
-    {
-        title: "AI Security Assessment",
-        description: "Evaluate AI ecosystem to identify vulnerabilities, mitigate adversarial risks and ensure alignment with standards.",
+        description: "Assess, implement, and prove compliance with the EU AI Act and ISO 42001 so responsible AI is provable to regulators, boards, and customers.",
         icon: ShieldCheck,
+        href: "/ai-risk-and-governance",
+    },
+    {
+        title: "AI System Technical Assessment",
+        description: "Find the risks in your models, data pipelines, and integrations, including adversarial exposure and failure modes, before they reach production.",
+        icon: Search,
+        href: "/architecture",
+    },
+    {
+        title: "Training & Awareness for AI",
+        description: "Equip teams and leaders to recognize AI risk and apply safeguards with confidence, turning policy into everyday practice and culture.",
+        icon: GraduationCap,
+        href: "/training",
+    },
+    {
+        title: "vCISO Leadership",
+        description: "Executive-level security and AI risk strategy, board-ready reporting, and a roadmap that scales governance alongside your ambition.",
+        icon: UserRound,
+        href: "/vciso",
     },
 ];
 
 const Expertise = () => {
     return (
-        <Section className="bg-dark-charcoal border-y border-card-border">
-            <div className="flex flex-col lg:flex-row gap-16 items-center">
-                <div className="lg:w-1/2">
-                    <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-foreground">
-                        Tailored AI Governance Services Aligned with Your Strategic Objectives
-                    </h2>
-                    <p className="text-foreground/65 text-lg mb-10 leading-relaxed">
-                        We deliver modular, compliance-ready solutions that map directly to your risk posture, regulatory mandates, and operational goals.
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                        {advantages.map((adv, index) => (
-                            <motion.div
-                                key={adv.title}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                className="space-y-3"
-                            >
-                                <div className="flex items-center space-x-3">
-                                    <adv.icon className="w-5 h-5 text-brand-orange" />
-                                    <h4 className="font-bold text-foreground">{adv.title}</h4>
-                                </div>
-                                <p className="text-foreground/60 text-sm">{adv.description}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-                <div className="lg:w-1/2">
-                    <div className="glass-card p-8 lg:p-10">
-                        <div className="text-sm font-medium text-foreground/55 mb-8">Our Services</div>
-                        <div className="space-y-6">
-                            {["Protect your data in the AI era", "Enforce privacy and compliance", "Enable ethical oversight across every touchpoint"].map((item, index) => (
-                                <div key={item} className="flex items-start gap-4">
-                                    <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-card-border text-sm font-semibold text-foreground/60">
-                                        {index + 1}
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-foreground">{item}</h3>
-                                        <p className="mt-1 text-sm text-foreground/55">
-                                            AIPurview empowers organizations to harness AI responsibly without disrupting the business.
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+        <Section id="services" className="bg-background">
+            <div className="max-w-3xl">
+                <div className="text-xs font-bold uppercase tracking-[0.16em] text-brand-orange">Our Services</div>
+                <h2 className="mt-4 text-3xl font-black leading-tight text-foreground md:text-5xl">Tailored AI governance services, aligned to your objectives.</h2>
+                <p className="mt-5 text-lg leading-relaxed text-foreground/65">
+                    We deliver modular, AI-focused services that map directly to your risk posture, regulatory obligations, and operational goals.
+                </p>
+            </div>
+            <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+                {services.map((service, index) => (
+                    <motion.div
+                        key={service.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.45, delay: index * 0.08 }}
+                        viewport={{ once: true }}
+                        className="glass-card flex flex-col p-6"
+                    >
+                        <service.icon className="mb-5 h-7 w-7 text-brand-orange" />
+                        <h3 className="text-lg font-bold leading-tight text-foreground">{service.title}</h3>
+                        <p className="mt-3 flex-1 text-sm leading-relaxed text-foreground/60">{service.description}</p>
+                        <Link href={service.href} className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-orange">
+                            Explore service <ArrowRight className="h-4 w-4" />
+                        </Link>
+                    </motion.div>
+                ))}
             </div>
         </Section>
     );

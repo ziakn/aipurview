@@ -1,18 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { ArrowRight, Menu, ShieldCheck, X } from "lucide-react";
-import { Button } from "../ui/Button";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
     { name: "vCISO", href: "/vciso" },
     { name: "AI Risk & Governance", href: "/ai-risk-and-governance" },
-    { name: "Architecture", href: "/architecture" },
+    { name: "Method", href: "/#method" },
     { name: "Solutions", href: "/solutions" },
     { name: "Training", href: "/training" },
-    { name: "About Us", href: "/about-us" },
-    { name: "Articles", href: "/blog" },
+    { name: "About", href: "/#why" },
 ];
 
 const Navbar = () => {
@@ -31,13 +30,15 @@ const Navbar = () => {
                 }`}
         >
             <div className="mx-auto flex max-w-[1600px] items-center justify-between px-5 md:px-10 xl:px-16">
-                <Link href="/" className="flex items-center gap-3" aria-label="AIPurview home">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-md border-2 border-foreground bg-card-bg">
-                        <ShieldCheck className="h-6 w-6 text-brand-orange" aria-hidden="true" />
-                    </span>
-                    <span className="text-xl font-black leading-none tracking-[0] text-foreground md:text-2xl">
-                        AIPurview<span className="text-foreground/45">.com</span>
-                    </span>
+                <Link href="/" aria-label="AIPurview home">
+                    <Image
+                        src="/aipurview-logo.png"
+                        alt="AIPurview"
+                        width={170}
+                        height={64}
+                        className="h-[34px] w-auto"
+                        priority
+                    />
                 </Link>
 
                 <div className="hidden items-center gap-6 xl:flex 2xl:gap-9">
@@ -53,11 +54,8 @@ const Navbar = () => {
                 </div>
 
                 <div className="hidden items-center gap-3 xl:flex">
-                    <Link href="/contact">
-                        <Button variant="outline" size="sm" className="gap-3 px-5 py-3">
-                            Contact Us
-                            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                        </Button>
+                    <Link href="/contact" className="rounded-md bg-foreground px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-orange">
+                        Contact Us
                     </Link>
                 </div>
 

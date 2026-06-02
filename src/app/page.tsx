@@ -6,7 +6,6 @@ import TrustBar from "@/components/sections/TrustBar";
 import ValueProposition from "@/components/sections/ValueProposition";
 import Process from "@/components/sections/Process";
 import Expertise from "@/components/sections/Expertise";
-import FAQ from "@/components/sections/FAQ";
 
 export default function Home() {
   return (
@@ -16,23 +15,19 @@ export default function Home() {
       <TrustBar />
       <ValueProposition />
       <Expertise />
-      <ThreePillars />
       <Process />
-      <FAQ />
+      <ThreePillars />
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-dark-charcoal border-y border-card-border">
+      <section className="bg-background py-16 md:py-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl font-black mb-8 text-foreground max-w-3xl">AI Governance you can prove, AI Risk you can manage.</h2>
-          <p className="text-foreground/60 text-lg mb-12 max-w-2xl">
-            As you integrate AI, our Governance Services ensure compliance, protect data, and accelerate innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            <a href="/contact" className="btn-primary w-full sm:w-auto text-center">
-              Book a Consultation
-            </a>
-            <a href="/vciso" className="btn-secondary w-full sm:w-auto text-center">
-              Explore vCISO Services
+          <div className="rounded-2xl bg-[#2a1467] px-6 py-14 text-center text-white md:px-10 md:py-16">
+            <h2 className="mx-auto max-w-3xl text-3xl font-black leading-tight text-white md:text-5xl">Ready to make Responsible AI your advantage?</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/70">
+              In one conversation, we&apos;ll map where you stand against the EU AI Act and ISO 42001, and what it takes to get production-ready.
+            </p>
+            <a href="/contact" className="btn-primary mt-8 inline-flex">
+              Book a Free 30-Minute Consultation <span className="ml-2" aria-hidden="true">→</span>
             </a>
           </div>
         </div>

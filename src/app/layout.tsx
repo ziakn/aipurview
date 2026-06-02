@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "AIPurview | Premium AI Security & Governance",
-  description: "Securing the Intelligence that Powers Your Enterprise. Expert AI Governance, Architecture, and Training.",
+  title: "AIPurview | AI Governance, Assurance & Security",
+  description: "Helping enterprises govern, assess, and secure AI from strategy to production.",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",

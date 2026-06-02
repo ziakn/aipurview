@@ -1,91 +1,86 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ClipboardCheck, FileCheck2, ShieldCheck, Target, Users, Zap } from "lucide-react";
+import { Check, ClipboardCheck, LockKeyhole, Search, ShieldCheck } from "lucide-react";
 import Section from "../ui/Section";
 
 const features = [
     {
-        title: "Prove Risk Oversight",
-        description: "Translate strategy into execution with evidence that supports compliance, resilience, and audit readiness.",
+        title: "Govern AI with Confidence",
+        description: "Establish ownership, policies, and decision rights for AI so adoption stays accountable, explainable, and aligned to your risk appetite.",
         icon: ShieldCheck,
     },
     {
-        title: "Validate Security Controls",
-        description: "Quantify cyber risk and strengthen maturity with controls that can be reviewed and trusted.",
-        icon: Zap,
+        title: "Assess AI Systems for Risk",
+        description: "Evaluate models, pipelines, and integrations for security weaknesses, adversarial exposure, and failure modes before they reach production.",
+        icon: Search,
     },
     {
-        title: "Meet Privacy Regulations",
-        description: "Integrate data privacy into a cohesive governance framework for emerging AI operations.",
-        icon: Users,
+        title: "Protect Data Across the AI Lifecycle",
+        description: "Embed privacy and data protection into how AI systems collect, process, and learn so sensitive data stays controlled.",
+        icon: LockKeyhole,
     },
     {
-        title: "Operationalize AI Governance",
-        description: "Turn cybersecurity, privacy, and AI governance into practical business enablers.",
+        title: "Operationalize Responsible AI",
+        description: "Turn frameworks into repeatable workflows, training, and oversight that keep AI safe, compliant, and audit-ready as you scale.",
         icon: ClipboardCheck,
     },
 ];
 
 const proofPoints = [
-    { label: "Compliance with Frameworks", icon: FileCheck2 },
-    { label: "Deliver Audit-Ready Evidence", icon: ShieldCheck },
-    { label: "Targeted Workshop & Training", icon: Target },
-    { label: "Third-Party Risk Management", icon: Users },
+    "AI Governance Frameworks (ISO 42001, EU AI Act)",
+    "Audit-Ready AI Evidence",
+    "AI Risk Training & Workshops",
+    "Third-Party & Model Risk Management",
 ];
 
 const ValueProposition = () => {
     return (
-        <Section className="bg-background border-y border-card-border">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 items-start">
-                <div>
-                    <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-foreground">
-                        Engineering Strategic AI Governance for Trusted Outcomes
-                    </h2>
-                    <p className="text-foreground/65 text-lg mb-10 leading-relaxed">
-                        AIPurview integrates governance of cybersecurity, data privacy and AI into a cohesive framework that supports compliance, resilience and audit readiness. We help organizations translate strategy into execution, quantifying cyber risk, enhancing maturity and enabling trusted outcomes.
+        <>
+            <Section id="governance" className="bg-background">
+                <div className="max-w-3xl">
+                    <div className="text-xs font-bold uppercase tracking-[0.16em] text-brand-orange">Engineering Strategic AI Governance</div>
+                    <h2 className="mt-4 text-3xl font-black leading-tight text-foreground md:text-5xl">One framework for trusted AI outcomes.</h2>
+                    <p className="mt-5 text-lg leading-relaxed text-foreground/65">
+                        Responsible AI needs more than policy. AIPurview unites governance, security, and privacy into one practical framework, translating AI strategy into evidence, controls, and trusted outcomes you can defend.
                     </p>
-                    <div className="space-y-8">
-                        {features.map((feature, index) => (
-                            <motion.div
-                                key={feature.title}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                className="flex items-start space-x-5"
-                            >
-                                <div className="w-10 h-10 rounded-md bg-background border border-card-border flex items-center justify-center shrink-0">
-                                    <feature.icon className="w-5 h-5 text-brand-orange" />
-                                </div>
-                                <div>
-                                    <h4 className="text-lg font-bold mb-2 text-foreground">{feature.title}</h4>
-                                    <p className="text-foreground/60 text-sm leading-relaxed">
-                                        {feature.description}
-                                    </p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
                 </div>
+                <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+                    {features.map((feature, index) => (
+                        <motion.div
+                            key={feature.title}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.45, delay: index * 0.08 }}
+                            viewport={{ once: true }}
+                            className="glass-card p-6"
+                        >
+                            <feature.icon className="mb-5 h-7 w-7 text-brand-orange" />
+                            <h3 className="text-lg font-bold leading-tight text-foreground">{feature.title}</h3>
+                            <p className="mt-3 text-sm leading-relaxed text-foreground/60">{feature.description}</p>
+                        </motion.div>
+                    ))}
+                </div>
+            </Section>
 
-                <div className="glass-card p-8 lg:p-10">
-                    <div className="border-b border-card-border pb-6 mb-6">
-                        <div className="text-sm font-bold text-brand-orange mb-3">Your experienced partner</div>
-                        <div className="text-3xl font-black leading-tight text-foreground mb-3 md:text-4xl">Turning Cybersecurity, Privacy and AI Governance into Business Enablers</div>
-                        <p className="text-foreground/60 text-sm leading-relaxed">Focused governance support that helps your teams manage risk without disrupting the business.</p>
+            <section className="bg-background px-6 pb-16 md:pb-20">
+                <div className="container mx-auto grid gap-8 rounded-2xl bg-[#2a1467] p-8 text-white md:p-12 lg:grid-cols-2 lg:items-center">
+                    <div>
+                        <div className="text-xs font-bold uppercase tracking-[0.16em] text-[#f3b98a]">Your Experienced Partner</div>
+                        <h2 className="mt-4 text-3xl font-black leading-tight text-white md:text-4xl">Turning AI Governance into a Business Enabler.</h2>
+                        <p className="mt-4 text-white/70">Practical, AI-focused governance that helps your teams manage risk without slowing the business down.</p>
                     </div>
-                    <div className="space-y-4">
+                    <div className="grid gap-3 sm:grid-cols-2">
                         {proofPoints.map((point) => (
-                            <div key={point.label} className="flex items-center gap-3">
-                                <point.icon className="h-5 w-5 text-brand-orange" />
-                                <span className="text-sm font-semibold text-foreground/70">{point.label}</span>
+                            <div key={point} className="flex gap-3 rounded-lg border border-white/15 bg-white/5 p-4 text-sm font-semibold text-white/90">
+                                <Check className="h-5 w-5 shrink-0 text-[#f3b98a]" />
+                                <span>{point}</span>
                             </div>
                         ))}
                     </div>
                 </div>
-            </div>
-        </Section>
+            </section>
+        </>
     );
 };
 
