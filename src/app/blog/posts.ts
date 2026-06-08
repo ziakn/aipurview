@@ -4,7 +4,8 @@ export const blogPosts = [
         title: "Beyond Trust: Building an AI Governance Framework for the Generative Era",
         date: "December 22, 2025",
         excerpt: "The AI honeymoon phase is over. As organizations move past the wow factor of Generative AI, leaders need governance frameworks that create confidence.",
-        image: "https://aipurview.com/wp-content/uploads/2025/12/GettyImages-1495820954_8395d5.webp",
+        image: "/blog/ai-governance-cover.svg",
+        imageAlt: "AI governance dashboard with risk, oversight, and audit controls",
         content: [
             "The AI honeymoon phase is over. As organizations move past the wow factor of Generative AI, they are hitting a wall built of silicon and uncertainty.",
             "In the early days of adoption, the conversation was centered on trust. Today, the market has pivoted toward confidence. For leaders in highly regulated sectors like healthcare and financial services, blindly trusting an algorithm is not a strategy; it is a liability.",
@@ -18,7 +19,8 @@ export const blogPosts = [
         title: "How Client Achieved Secure Hyper-Growth with AI Security Governance & Privacy-by-Design",
         date: "December 20, 2025",
         excerpt: "Executive Summary NovaPay, a rapidly emerging financial technology startup, faced a critical growth vs. security dilemma while scaling automation.",
-        image: "https://aipurview.com/wp-content/uploads/2025/11/speaker-and-interviewer-in-front-of-audience-at-a-2023-11-27-05-07-53-utc.jpg",
+        image: "/blog/privacy-by-design-cover.svg",
+        imageAlt: "Secure fintech growth represented by privacy controls and encrypted data flows",
         content: [
             "NovaPay, a fictional name for the client, was a rapidly emerging financial technology startup disrupting the peer-to-peer lending space. They faced a critical growth vs. security dilemma.",
             "The company possessed large volumes of user data and needed speed, but lacked the infrastructure to scale automation without violating strict financial regulations. By partnering with AIPurview, NovaPay implemented a secure AI architecture that automated operations while preserving data privacy and regulatory compliance.",
@@ -32,7 +34,8 @@ export const blogPosts = [
         title: "Few Companies Worldwide Hold All Three ISO Certifications",
         date: "November 24, 2025",
         excerpt: "In today's trust economy, security, privacy, and responsible AI are not just technical concerns. They are strategic differentiators.",
-        image: "https://aipurview.com/wp-content/uploads/2025/10/tablet-man-and-portrait-in-server-room-of-engineer-programming-at-night-information-technology-f-1.jpg",
+        image: "/blog/iso-certifications-cover.svg",
+        imageAlt: "Integrated ISO certification controls for security, privacy, and responsible AI",
         content: [
             "In today's trust economy, security, privacy, and responsible AI are not just technical concerns. They are strategic differentiators.",
             "Organizations that already maintain ISO 27001 often need to go further as expectations rise from regulators, customers, and auditors. ISO 27701 adds privacy governance, while ISO 42001 introduces a management system for responsible AI.",
@@ -46,7 +49,8 @@ export const blogPosts = [
         title: "Top 10 Cybersecurity Threats Mid-Size Businesses Must Prepare for in 2026",
         date: "November 24, 2025",
         excerpt: "In 2025, mid-size businesses are no longer overlooked by cybercriminals. Lean IT teams and expanding digital footprints raise the stakes.",
-        image: "https://aipurview.com/wp-content/uploads/2025/10/vertical-photo-of-a-man-employs-cloud-based-computing-on-his-smartphone-1-2.jpg",
+        image: "/blog/cybersecurity-threats-cover.svg",
+        imageAlt: "Cybersecurity threat landscape with cloud, identity, and incident response signals",
         content: [
             "In 2025, mid-size businesses are no longer overlooked by cybercriminals. With lean IT teams and expanding digital footprints, they have become prime targets for attacks that exploit automation gaps, cloud misconfigurations, human error, and AI-enabled threats.",
             "Ransomware has evolved into multi-extortion campaigns where attackers encrypt data and threaten to leak it publicly. Phishing-as-a-Service has also matured, giving low-skilled actors access to sophisticated phishing kits and deepfake-enabled impersonation.",
@@ -60,7 +64,8 @@ export const blogPosts = [
         title: "Top 10 Cybersecurity Threats Mid-Size Businesses Must Prepare for in 2026",
         date: "October 20, 2025",
         excerpt: "In 2025, mid-size businesses are no longer overlooked by cybercriminals. With lean IT teams and cloud adoption, threat exposure is growing.",
-        image: "https://aipurview.com/wp-content/uploads/2025/10/vertical-photo-of-a-man-employs-cloud-based-computing-on-his-smartphone-1-2.jpg",
+        image: "/blog/cybersecurity-threats-cover.svg",
+        imageAlt: "Cybersecurity threat landscape with cloud, identity, and incident response signals",
         content: [
             "In 2025, mid-size businesses are no longer overlooked by cybercriminals. With lean IT teams and expanding digital footprints, they have become prime targets for attacks that exploit automation gaps, cloud misconfigurations, human error, and AI-enabled threats.",
             "Key threats include ransomware, phishing-as-a-service, autonomous agent exploits, insider threats, supply chain infiltration, SaaS zero-days, credential compromise, cloud misconfiguration, data leakage, and weak incident readiness.",
@@ -72,7 +77,8 @@ export const blogPosts = [
         title: "Few Companies Worldwide Hold All Three ISO Certifications",
         date: "October 20, 2025",
         excerpt: "In today's trust economy, security, privacy, and responsible AI are strategic differentiators for companies preparing for audits and regulators.",
-        image: "https://aipurview.com/wp-content/uploads/2025/10/tablet-man-and-portrait-in-server-room-of-engineer-programming-at-night-information-technology-f-1.jpg",
+        image: "/blog/iso-certifications-cover.svg",
+        imageAlt: "Integrated ISO certification controls for security, privacy, and responsible AI",
         content: [
             "Security, privacy, and responsible AI are becoming linked obligations. Organizations that treat them as separate workstreams often duplicate effort and struggle to keep evidence current.",
             "ISO 27001, ISO 27701, and ISO 42001 can be approached as an integrated management system. Shared controls, mapped evidence, clear ownership, and continuous monitoring help reduce duplicated work.",

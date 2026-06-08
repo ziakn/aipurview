@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Newspaper } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
@@ -60,8 +61,15 @@ const BlogDetailPage = async ({ params }: BlogDetailPageProps) => {
 
             <Section>
                 <article className="mx-auto max-w-4xl">
-                    <div className="mb-12 aspect-[16/9] overflow-hidden rounded-md bg-foreground/5">
-                        <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
+                    <div className="relative mb-12 aspect-[16/9] overflow-hidden rounded-md bg-foreground/5">
+                        <Image
+                            src={post.image}
+                            alt={post.imageAlt}
+                            fill
+                            sizes="(min-width: 1024px) 896px, calc(100vw - 48px)"
+                            className="object-cover"
+                            priority
+                        />
                     </div>
                     <div className="space-y-6 text-lg leading-relaxed text-foreground/70">
                         {post.content.map((paragraph) => (

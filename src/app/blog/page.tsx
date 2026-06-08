@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail, Newspaper } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -41,11 +42,13 @@ const BlogPage = () => {
                             className="glass-card overflow-hidden transition-colors hover:border-foreground/25"
                         >
                             <Link href={`/blog/${post.slug}`} className="block">
-                                <div className="aspect-[16/10] overflow-hidden bg-foreground/5">
-                                    <div
-                                        aria-label=""
-                                        className="h-full w-full bg-cover bg-center transition-transform duration-500 hover:scale-105"
-                                        style={{ backgroundImage: `url(${post.image})` }}
+                                <div className="relative aspect-[16/10] overflow-hidden bg-foreground/5">
+                                    <Image
+                                        src={post.image}
+                                        alt={post.imageAlt}
+                                        fill
+                                        sizes="(min-width: 768px) 50vw, 100vw"
+                                        className="object-cover transition-transform duration-500 hover:scale-105"
                                     />
                                 </div>
                             </Link>

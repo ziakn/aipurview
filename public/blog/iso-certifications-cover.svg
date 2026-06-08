@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Integrated ISO certifications</title>
+  <desc id="desc">Three connected certification pillars for information security, privacy, and responsible AI.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f4f3"/>
+      <stop offset=".62" stop-color="#edf4f1"/>
+      <stop offset="1" stop-color="#fae2d1"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="34" flood-color="#1f1f1f" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <path d="M260 708h1080" stroke="#1f1f1f" stroke-width="18" stroke-linecap="round" opacity=".16"/>
+  <g filter="url(#shadow)">
+    <rect x="280" y="278" width="300" height="430" rx="34" fill="#fff"/>
+    <rect x="650" y="208" width="300" height="500" rx="34" fill="#fff"/>
+    <rect x="1020" y="278" width="300" height="430" rx="34" fill="#fff"/>
+    <circle cx="430" cy="414" r="72" fill="#f4833a"/>
+    <circle cx="800" cy="354" r="72" fill="#003399"/>
+    <circle cx="1170" cy="414" r="72" fill="#6f6f6a"/>
+    <path d="M391 415l40 39 72-84" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M761 355l40 39 72-84" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1131 415l40 39 72-84" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#1f1f1f" opacity=".72">
+      <rect x="354" y="546" width="152" height="24" rx="12"/>
+      <rect x="328" y="602" width="204" height="18" rx="9" opacity=".55"/>
+      <rect x="724" y="516" width="152" height="24" rx="12"/>
+      <rect x="698" y="572" width="204" height="18" rx="9" opacity=".55"/>
+      <rect x="1094" y="546" width="152" height="24" rx="12"/>
+      <rect x="1068" y="602" width="204" height="18" rx="9" opacity=".55"/>
+    </g>
+  </g>
+  <path d="M580 488h70M950 488h70" stroke="#f4833a" stroke-width="16" stroke-linecap="round"/>
+</svg>
