@@ -1,0 +1,14 @@
+services:
+  nextjs:
+    build: .
+    container_name: aiperview_nextjs
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+    command: npm run dev -- -H 0.0.0.0
