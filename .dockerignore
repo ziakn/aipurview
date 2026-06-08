@@ -6,3 +6,12 @@ node_modules
 Dockerfile
 docker-compose.yml
 README.md
+node_modules
+.next
+.git
+.env.local
+.env
+Dockerfile
+docker-compose.yml
+npm-debug.log
+README.md
